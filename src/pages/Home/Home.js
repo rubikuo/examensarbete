@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Home.scss";
 import { Helmet } from "react-helmet-async";
 import partialPadals from "../../assets/home/partialPadals.png";
@@ -62,7 +62,6 @@ const Home = () => {
         <title>Rubi Kuo - Home</title>
       </Helmet>
       <main className="Home" id="home">
-        {/* <section className="Home__section Home__section-intro"> */}
         <p className="Home__title Home__title-name">Rubi Kuo</p>
         <img
           className="Home__img Home__img-padals"
@@ -103,7 +102,6 @@ const Home = () => {
         >
           View Portfolio
         </Link>
-        {/* </section> */}
       </main>
     </>
   );

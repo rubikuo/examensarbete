@@ -78,7 +78,7 @@
       margin-right: -2px;
       transition: 0.5s ease-in-out;
       &:hover {
-        @extend %secondary-font-color;
+        @extend %title-font-color;
         transform: scale(1.1);
       }
       &--active {

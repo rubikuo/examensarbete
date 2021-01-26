@@ -6,16 +6,25 @@
   position: relative;
   overflow: hidden;
   font-family: "Merienda", cursive;
-  background: linear-gradient(
-      0deg,
-      rgba(77, 125, 165, 0.116),
-      rgba(241, 192, 161, 0.171)
-    ),
-    url("../../assets/home/cherryTree-grouped.png");
-  background-position: left;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  //   background: linear-gradient(
+  //       0deg,
+  //       rgba(77, 125, 165, 0.116),
+  //       rgba(241, 192, 161, 0.171)
+  //     ),
+  //     url("../../assets/home/cherryTree-grouped.png");
+  //   background-position: left;
+  //   background-repeat: no-repeat;
+  //   background-attachment: fixed;
+  //   background-size: cover;
+
+  @include bgImg(
+    "../assets/home/cherryTree-grouped.png",
+    fixed,
+    cover,
+    $bgDawn,
+    $bgLightBlue
+  );
+
   @extend %col-mid;
 
   &__wrapper {

@@ -27,16 +27,18 @@
 /* font styles */
 %main-font {
   font-family: "Kaushan Script", cursive;
+  font-size: 2.2rem;
+  letter-spacing: 1.2px;
 }
 %main-font-color {
   color: #252525;
 }
 
-%secondary-font {
+%title-font {
   font-family: "Herr Von Muellerhoff", cursive;
 }
 
-%secondary-font-color {
+%title-font-color {
   color: #c59d5f;
 }
 
@@ -56,4 +58,15 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+$bgDawn: rgba(241, 192, 161, 0.171);
+$bgLightBlue: rgba(77, 125, 165, 0.116);
+
+@mixin bgImg($url, $attach, $size, $lowerBgColor, $higherBgColor) {
+  background: linear-gradient(0deg, $lowerBgColor, $higherBgColor), url(#{$url});
+  background-position: left;
+  background-repeat: no-repeat;
+  background-attachment: $attach;
+  background-size: $size;
 }

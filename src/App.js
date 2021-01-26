@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.scss";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
-// import About from "./Page/About/About";
+import About from "./pages/About/About";
 // import Portfolio from "./Page/Portfolio/Portfolio";
 import { HelmetProvider } from "react-helmet-async";
 
@@ -27,8 +27,8 @@ const App = () => {
         <Route exact path="/">
           <Home scrollY={scrollY} current={current} />
         </Route>
-        {/* <Route path="/about" component={About} />
-        <Route path="/portfolio" component={Portfolio} /> */}
+        <Route path="/about" component={About} />
+        {/* <Route path="/portfolio" component={Portfolio} /> */}
       </Router>
     </HelmetProvider>
   );

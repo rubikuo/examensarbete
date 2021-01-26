@@ -1,0 +1,170 @@
+@import "../../style/SassVariables";
+@import url("https://fonts.googleapis.com/css2?family=Merienda&family=Merienda+One&display=swap");
+
+.About {
+  &__section {
+    position: relative;
+
+    &-intro {
+      height: 100vh;
+      max-height: 600px;
+      position: relative;
+
+      @include bgImg(
+        "../assets/about/CherryBlossom.png",
+        scroll,
+        cover,
+        $bgLightBlue,
+        $bgDawn
+      );
+    }
+    &-skill {
+      @include bgImg(
+        "../assets/about/Lantern.png",
+        scroll,
+        cover,
+        $bgDawn,
+        $bgLightBlue
+      );
+
+      width: 100%;
+      padding-top: 56.25%;
+      overflow: hidden;
+    }
+  }
+
+  &__title {
+    @extend %main-font;
+    font-size: 4vw;
+
+    &-name {
+      margin: 0;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    width: 48%;
+
+    &-anime {
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: 1s ease-in;
+      &--show {
+        opacity: 1;
+        filter: drop-shadow(0 2px 5px);
+      }
+      &--hide {
+        opacity: 0;
+      }
+    }
+    &-origin {
+      transition: 1s ease-in;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      &--show {
+        opacity: 1;
+        filter: drop-shadow(0 2px 5px);
+      }
+      &--hide {
+        opacity: 0;
+      }
+    }
+    &-leftFace {
+      animation: leftFace 1s ease-in;
+      transform: translate(-50%, -50%);
+    }
+    &-rightFace {
+      width: 48%;
+      position: absolute;
+      top: 64%;
+      right: 50.05%;
+      animation: rightFace 1s ease-in;
+      transform: translate(50%, -50%);
+    }
+    &-bg {
+      width: 50vw;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      animation: bg 1.5s ease-in;
+      filter: none;
+    }
+  }
+  &__link {
+    position: absolute;
+    text-decoration: none;
+    top: 42%;
+    @extend %main-font;
+    font-size: 3.6vw;
+    font-weight: 600;
+    cursor: pointer;
+    // color: purple;
+    transform: translate(-50%, -50%);
+    transition: 1s ease-in;
+
+    animation-delay: 0.7s;
+    transition: 1s ease-in;
+    &-right {
+      right: 10%;
+
+      &--show {
+        opacity: 1;
+      }
+      &--hide {
+        opacity: 0;
+      }
+    }
+    &-left {
+      left: 18%;
+      &--show {
+        opacity: 1;
+      }
+      &--hide {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__article {
+    &-intro {
+      position: absolute;
+      width: 400px;
+      left: 10%;
+      top: 25%;
+      @extend %main-font;
+    }
+  }
+  &__title-name {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  &__para-intro {
+    @extend %main-font;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .About {
+    &__section {
+      &-intro {
+        max-height: 450px;
+      }
+    }
+    &__article {
+      &-intro {
+        top: 35%;
+      }
+    }
+    &__para-intro {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .About {
+    margin-top: 80px;
+  }
+}
