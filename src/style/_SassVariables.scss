@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Kaushan+Script&family=Source+Code+Pro:wght@300&display=swap");
+
+%row-mid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%row-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%col {
+  display: flex;
+  flex-direction: column;
+}
+
+%col-mid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* font styles */
+%main-font {
+  font-family: "Kaushan Script", cursive;
+}
+%main-font-color {
+  color: #252525;
+}
+
+%secondary-font {
+  font-family: "Herr Von Muellerhoff", cursive;
+}
+
+%secondary-font-color {
+  color: #c59d5f;
+}
+
+%body-font {
+  font-family: "Cabin", sans-serif;
+  color: #515151;
+}
+
+%container {
+  width: 85%;
+  max-width: 122.5rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+
+%BG-Img-Pos {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

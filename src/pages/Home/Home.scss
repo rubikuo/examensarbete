@@ -1,0 +1,258 @@
+@import "../../style/SassVariables";
+@import url("https://fonts.googleapis.com/css2?family=Merienda&family=Merienda+One&display=swap");
+
+.Home {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  font-family: "Merienda", cursive;
+  background: linear-gradient(
+      0deg,
+      rgba(77, 125, 165, 0.116),
+      rgba(241, 192, 161, 0.171)
+    ),
+    url("../../assets/home/cherryTree-grouped.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  @extend %col-mid;
+
+  &__wrapper {
+    @extend %row-mid;
+    margin-top: 30px;
+    &--show {
+      animation: showTime 2s;
+    }
+    &--hide {
+      opacity: 0;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    z-index: -100;
+    &-padals {
+      width: 300px;
+      animation: padals 8s infinite linear;
+    }
+    &-padals2 {
+      width: 300px;
+
+      animation: padals2 12s infinite linear;
+    }
+    &-padals3 {
+      width: 300px;
+      animation: padals3 7s infinite linear;
+    }
+  }
+
+  @keyframes padals {
+    0% {
+      top: 0px;
+      left: 10px;
+      transform: rotate(-10deg);
+      opacity: 1;
+    }
+    20% {
+      top: 90px;
+      left: 100px;
+      transform: rotate(-30deg);
+    }
+    40% {
+      top: 135px;
+      left: 300px;
+      transform: rotate(-50deg);
+    }
+    60% {
+      top: 225px;
+      left: 500px;
+      opacity: 1;
+    }
+    80% {
+      top: 330px;
+      left: 800px;
+    }
+    100% {
+      bottom: 0px;
+      left: 900px;
+      opacity: 0;
+    }
+  }
+
+  @keyframes padals2 {
+    0% {
+      top: 12px;
+      left: 20px;
+      opacity: 1;
+    }
+    20% {
+      top: 150px;
+      left: 80px;
+      transform: rotate(10deg);
+    }
+    40% {
+      top: 220px;
+      left: 130px;
+      transform: rotate(20deg);
+      opacity: 1;
+    }
+    60% {
+      top: 320px;
+      left: 260px;
+    }
+    80% {
+      top: 450px;
+      left: 460px;
+      transform: rotate(40deg);
+    }
+    100% {
+      bottom: 0px;
+      left: 500px;
+      opacity: 0;
+    }
+  }
+
+  @keyframes padals3 {
+    0% {
+      top: 10px;
+      left: 15px;
+      opacity: 1;
+    }
+    20% {
+      top: 160px;
+      left: 100px;
+      transform: rotate(20deg);
+    }
+    40% {
+      top: 255px;
+      left: 300px;
+      transform: rotate(30deg);
+      opacity: 1;
+    }
+    60% {
+      top: 305px;
+      left: 360px;
+    }
+    80% {
+      top: 430px;
+      left: 450px;
+      transform: rotate(50deg);
+    }
+    100% {
+      bottom: 0px;
+      left: 650px;
+      opacity: 0;
+    }
+  }
+  p {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    overflow: hidden;
+    padding: 0.5rem;
+  }
+  &__title {
+    &-name {
+      font-size: 6rem;
+      color: #ffffff;
+      text-shadow: 0 1px 1px black;
+    }
+    &-typedText {
+      font-family: "Merienda", cursive;
+      font-size: 1.8rem;
+      font-weight: normal;
+      text-shadow: 0 1px 1px black;
+      color: #ffffff;
+    }
+    &-cursor {
+      display: inline-block;
+      width: 3px;
+      background-color: #f0f0f0;
+      margin-left: 0.1rem;
+      animation: blink 1s infinite;
+      font-size: 1.8rem;
+      &--typing {
+        background-color: #f0f0f0;
+        animation: none;
+      }
+    }
+    &-time {
+      font-size: 1.5rem;
+      text-shadow: 0 1px 1px black;
+      color: #ffffff;
+    }
+  }
+
+  &__hr {
+    width: 1.2rem;
+    margin: 0 10px;
+  }
+  &__btn {
+    width: 100px;
+    margin-top: 50px;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    font-family: "Merienda", cursive;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.372);
+    text-align: center;
+    text-decoration: none;
+    &--show {
+      animation: showTime 2.5s;
+    }
+    &--hide {
+      opacity: 0;
+    }
+  }
+}
+
+@keyframes showTime {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hideTime {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    background-color: #f0f0f0;
+  }
+  49% {
+    background-color: #f0f0f0;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #f0f0f0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .Home {
+    height: calc(100vh - 65px);
+  }
+}

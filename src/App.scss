@@ -1,0 +1,30 @@
+@import "./style/SassVariables";
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  @extend %body-font;
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+section {
+  //   padding: 3.9rem 0;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.6rem;
+}
