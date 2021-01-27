@@ -1,0 +1,17 @@
+@import "../../style/SassVariables";
+@import url("https://fonts.googleapis.com/css2?family=Merienda&family=Merienda+One&display=swap");
+
+.Portfolio {
+  min-height: 100vh;
+  &__section {
+    &-develop {
+      height: 100vh;
+      padding: 10%;
+      background-color: grey;
+    }
+    &-design {
+      height: 100vh;
+      background-color: rgb(210, 246, 255);
+    }
+  }
+}

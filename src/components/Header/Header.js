@@ -70,6 +70,20 @@ const Header = ({ current, setCurrent, scrollY }) => {
                 About
               </NavLink>
             </li>
+
+            <li className="Header__nav-item">
+              <NavLink
+                onClick={() => {
+                  setShowMenu(false);
+                  setCurrent("portfolio");
+                }}
+                activeClassName="Header__nav-link--active"
+                className="Header__nav-link"
+                to="/portfolio"
+              >
+                Portfolio
+              </NavLink>
+            </li>
             <li className="Header__nav-item">
               <NavHashLink
                 className="Header__nav-link"
@@ -81,34 +95,7 @@ const Header = ({ current, setCurrent, scrollY }) => {
                   setCurrent("home");
                 }}
               >
-                Skill
-              </NavHashLink>
-            </li>
-            <li className="Header__nav-item">
-              <NavLink
-                onClick={() => {
-                  setShowMenu(false);
-                  setCurrent("portfolio");
-                }}
-                activeClassName="Header__nav-link--active"
-                className="Header__nav-link"
-                to="/Portfolio"
-              >
-                Portfolio
-              </NavLink>
-            </li>
-            <li className="Header__nav-item">
-              <NavHashLink
-                className="Header__nav-link"
-                activeClassName="selected"
-                activeStyle={{ color: "#fcba58" }}
-                to="/#contact"
-                onClick={() => {
-                  setShowMenu(false);
-                  setCurrent("home");
-                }}
-              >
-                Contact
+                Resume
               </NavHashLink>
             </li>
           </ul>

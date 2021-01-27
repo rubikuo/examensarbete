@@ -5,7 +5,7 @@ import "./App.scss";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
-// import Portfolio from "./Page/Portfolio/Portfolio";
+import Portfolio from "./pages/Portfolio/Portfolio";
 import { HelmetProvider } from "react-helmet-async";
 
 const App = () => {
@@ -28,7 +28,7 @@ const App = () => {
           <Home scrollY={scrollY} current={current} />
         </Route>
         <Route path="/about" component={About} />
-        {/* <Route path="/portfolio" component={Portfolio} /> */}
+        <Route path="/portfolio" component={Portfolio} />
       </Router>
     </HelmetProvider>
   );

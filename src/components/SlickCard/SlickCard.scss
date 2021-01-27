@@ -1,0 +1,120 @@
+@import "../../style/SassVariables";
+
+.SlickCard {
+  background-color: grey;
+  width: 83.4%;
+
+  height: 80vh;
+  max-height: 300px;
+  border-radius: 5%;
+  position: relative;
+
+  @extend %col-mid;
+
+  &:hover .SlickCard__overlay {
+    opacity: 1;
+  }
+  &__overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: (translate(-50%, -50%));
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    background-color: rgb(34, 33, 33);
+    color: whitesmoke;
+    padding: 2rem;
+    font-size: 2rem;
+    @extend %col;
+    justify-content: space-around;
+    align-items: flex-start;
+    transition: 0.75s ease-in-out;
+    opacity: 0;
+  }
+  &__link {
+    display: inline-block;
+    border: 1px dotted #22abfa;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 10px;
+  }
+  img {
+    width: 80%;
+  }
+  &__myTrello {
+    @include bgImg(
+      "../assets/portfolio/myTrello.png",
+      scroll,
+      cover,
+      rgba(17, 105, 177, 0.844),
+      rgba(198, 193, 190, 0.789)
+    );
+  }
+
+  &__CloudyBox {
+    @include bgImg(
+      "../assets/portfolio/CloudyBoxBg.png",
+      scroll,
+      cover,
+      rgba(244, 244, 244, 0.919),
+      rgba(216, 239, 240, 0.789)
+    );
+  }
+
+  &__iQuiz {
+    @include bgImg(
+      "../assets/portfolio/iQuizBg.png",
+      scroll,
+      cover,
+      rgba(185, 185, 185, 0.788),
+      rgba(223, 239, 240, 0.445)
+    );
+  }
+  &__HBGWifiFinder {
+    @include bgImg(
+      "../assets/portfolio/HBG.png",
+      scroll,
+      cover,
+      rgba(167, 167, 167, 0.904),
+      rgba(216, 216, 216, 0.76)
+    );
+  }
+  &__TicTacToe {
+    @include bgImg(
+      "../assets/portfolio/TicTocToeBG.jpg",
+      scroll,
+      cover,
+      rgba(173, 173, 173, 0.747),
+      rgba(216, 216, 216, 0.671)
+    );
+  }
+  &__MdSimple {
+    @include bgImg(
+      "../assets/portfolio/MdsimpleBG.png",
+      scroll,
+      cover,
+      rgba(173, 173, 173, 0.747),
+      rgba(216, 216, 216, 0.671)
+    );
+  }
+  &__PrimeSweden {
+    @include bgImg(
+      "../assets/portfolio/PrimeSwedenBG.png",
+      scroll,
+      cover,
+      rgba(228, 228, 228, 0.767),
+      rgba(216, 216, 216, 0.884)
+    );
+  }
+}
+.slick-slide.slick-center div.SlickCard {
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.slick-list {
+  padding: 100px 90px 0px 90px !important;
+
+  height: 500px;
+}

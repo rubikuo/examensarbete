@@ -38,7 +38,7 @@
     font-size: 4vw;
 
     &-name {
-      margin: 0;
+      margin: 0 0 10px 0;
     }
   }
 
@@ -64,6 +64,7 @@
       transition: 1s ease-in;
       left: 50%;
       transform: translate(-50%, -50%);
+
       &--show {
         opacity: 1;
         filter: drop-shadow(0 2px 5px);
@@ -99,13 +100,17 @@
     @extend %main-font;
     font-size: 3.6vw;
     font-weight: 600;
+    z-index: 2;
     cursor: pointer;
-    // color: purple;
     transform: translate(-50%, -50%);
     transition: 1s ease-in;
-
     animation-delay: 0.7s;
     transition: 1s ease-in;
+
+    &:hover {
+      color: #551a8b;
+    }
+
     &-right {
       right: 10%;
 
@@ -136,10 +141,7 @@
       @extend %main-font;
     }
   }
-  &__title-name {
-    font-size: 3rem;
-    margin-bottom: 10px;
-  }
+
   &__para-intro {
     @extend %main-font;
   }

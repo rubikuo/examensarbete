@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { NavHashLink } from "react-router-hash-link";
 import "./About.scss";
 import RubiOrigin from "../../assets/about/RubiOrigin.png";
 import RubiAnime from "../../assets/about/Rubi.png";
 import RightFace from "../../assets/about/RubiHalfRight.png";
 import LeftFace from "../../assets/about/RubiHalfLeft.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
   const [showOrigin, setShowOrigin] = useState(false);
   const [showAnime, setShowAnime] = useState(false);
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
       <Helmet>
@@ -32,14 +38,15 @@ const About = () => {
         <section id="skill" className="About__section About__section-skill">
           <div className="About__leftSide">
             <img
+              // data-aos="flip-right"
               className=" About__image About__image-leftFace"
               src={LeftFace}
               alt=""
             />
-            <p
+            <NavHashLink
+              to="/portfolio/#develop"
               onMouseEnter={(e) => {
                 setShowOrigin(true);
-                console.log(e.target);
               }}
               onMouseLeave={() => {
                 setShowOrigin(false);
@@ -52,12 +59,19 @@ const About = () => {
               }
             >
               Developer
-            </p>
+            </NavHashLink>
           </div>
 
           <div className="About__rightSide">
-            <img className=" About__image-rightFace" src={RightFace} alt="" />
-            <p
+            <img
+              // data-aos="flip-left"
+              className=" About__image-rightFace"
+              src={RightFace}
+              alt=""
+            />
+            <NavHashLink
+              smooth
+              to="/portfolio/#design"
               onMouseEnter={() => {
                 setShowAnime(true);
               }}
@@ -72,7 +86,7 @@ const About = () => {
               }
             >
               Designer
-            </p>
+            </NavHashLink>
           </div>
 
           <img
