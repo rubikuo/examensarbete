@@ -3,25 +3,131 @@
 .Projects {
   width: 90%;
   margin: 0 auto;
-  background-color: red;
-  @extend %col-mid;
+  @extend %col;
+  min-height: 550px;
+
   &__wrapper {
     @extend %row-mid;
     width: 100%;
-
     flex-wrap: wrap;
   }
+
+  img {
+    width: 60%;
+  }
+
+  button {
+    @extend %main-font;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 10px 15px;
+    padding: 5px 10px;
+  }
+
   &__project {
     width: 45%;
+    min-width: 250px;
+    max-width: 400px;
     height: 280px;
     background-color: white;
     margin: 10px;
     flex-grow: 1;
-    @extend %row-mid;
+
+    position: relative;
+    @extend %col-mid, %radius;
     transform-style: preserve-3d;
-    animation: project 0.7s linear;
-    &-anime {
+
+    &--all {
+      animation: project 0.7s linear;
+    }
+    &--anime {
       animation: projectToggle 0.7s linear;
+    }
+    &:hover .Projects__project-overlay {
+      opacity: 1;
+    }
+    &-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: (translate(-50%, -50%));
+      width: 100%;
+      height: 100%;
+
+      background-color: rgb(34, 33, 33);
+      color: whitesmoke;
+      padding: 2rem;
+      font-size: 2rem;
+      @extend %col, %radius;
+      justify-content: space-around;
+      align-items: flex-start;
+      transition: 0.75s ease-in-out;
+      opacity: 0;
+    }
+    &--MyTrello {
+      @include bgImg(
+        "../assets/portfolio/myTrello.png",
+        scroll,
+        cover,
+        rgba(17, 105, 177, 0.844),
+        rgba(198, 193, 190, 0.789)
+      );
+    }
+
+    &--CloudyBox {
+      @include bgImg(
+        "../assets/portfolio/CloudyBoxBg.png",
+        scroll,
+        cover,
+        rgba(244, 244, 244, 0.919),
+        rgba(216, 239, 240, 0.789)
+      );
+    }
+
+    &--iQuiz {
+      @include bgImg(
+        "../assets/portfolio/iQuizBg.png",
+        scroll,
+        cover,
+        rgba(185, 185, 185, 0.788),
+        rgba(223, 239, 240, 0.445)
+      );
+    }
+    &--HBGWifiFinder {
+      @include bgImg(
+        "../assets/portfolio/HBG.png",
+        scroll,
+        cover,
+        rgba(167, 167, 167, 0.904),
+        rgba(216, 216, 216, 0.76)
+      );
+    }
+    &--TicTacToe {
+      @include bgImg(
+        "../assets/portfolio/TicTocToeBG.jpg",
+        scroll,
+        cover,
+        rgba(173, 173, 173, 0.747),
+        rgba(216, 216, 216, 0.671)
+      );
+    }
+    &--MdSimple {
+      @include bgImg(
+        "../assets/portfolio/MdsimpleBG.png",
+        scroll,
+        cover,
+        rgba(173, 173, 173, 0.747),
+        rgba(216, 216, 216, 0.671)
+      );
+    }
+    &--PrimeSweden {
+      @include bgImg(
+        "../assets/portfolio/PrimeSwedenBG.png",
+        scroll,
+        cover,
+        rgba(228, 228, 228, 0.767),
+        rgba(216, 216, 216, 0.884)
+      );
     }
   }
 

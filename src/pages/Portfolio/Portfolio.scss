@@ -9,6 +9,7 @@
       width: 100%;
       min-height: calc(100vh - 80px);
       padding: 10%;
+      @extend %row-mid;
     }
     &-design {
       height: 100vh;

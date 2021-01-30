@@ -1,12 +1,14 @@
 .Modal {
   width: 80vw;
+  max-width: 750px;
   height: 80vh;
   position: absolute;
+  margin-top: 40px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  padding: "50px";
+  padding: 50px;
   z-index: 1000;
 
   &__overlay {

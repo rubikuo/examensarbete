@@ -1,0 +1,9 @@
+@import "../../style/SassVariables";
+
+.Options {
+  margin: 0px auto 10px auto;
+  @extend %row-mid;
+  width: 50%;
+  min-width: 350px;
+  flex-wrap: wrap;
+}

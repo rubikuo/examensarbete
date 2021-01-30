@@ -2,13 +2,13 @@ import React from "react";
 import "./Modal.scss";
 import ReactDom from "react-dom";
 
-const Modal = ({ open, children, onClose }) => {
+const Modal = ({ open, onClose, project }) => {
   if (!open) return null;
   return ReactDom.createPortal(
     <>
       <div className="Modal__overlay" onClick={onClose} />
       <div className="Modal">
-        {children}
+        <p>{project.details}</p>
         <button onClick={onClose}>Close</button>
       </div>
     </>,

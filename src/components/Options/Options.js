@@ -1,8 +1,8 @@
 import React from "react";
-
+import "./Options.scss";
 const Options = ({ types, controlContent }) => {
   return (
-    <div>
+    <div className="Options">
       {types.map((type) => {
         return (
           <button key={type} onClick={() => controlContent(type)}>
