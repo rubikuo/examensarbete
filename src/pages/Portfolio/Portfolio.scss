@@ -6,10 +6,9 @@
   &__section {
     &-develop {
       margin-top: 80px;
-
+      width: 100%;
       min-height: calc(100vh - 80px);
       padding: 10%;
-      background-color: grey;
     }
     &-design {
       height: 100vh;

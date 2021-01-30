@@ -1,0 +1,59 @@
+@import "../../style/SassVariables";
+
+.Projects {
+  width: 90%;
+  margin: 0 auto;
+  background-color: red;
+  @extend %col-mid;
+  &__wrapper {
+    @extend %row-mid;
+    width: 100%;
+
+    flex-wrap: wrap;
+  }
+  &__project {
+    width: 45%;
+    height: 280px;
+    background-color: white;
+    margin: 10px;
+    flex-grow: 1;
+    @extend %row-mid;
+    transform-style: preserve-3d;
+    animation: project 0.7s linear;
+    &-anime {
+      animation: projectToggle 0.7s linear;
+    }
+  }
+
+  @keyframes project {
+    0% {
+      opacity: 0;
+      transform: scale(0.6);
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes projectToggle {
+    0% {
+      transform: scale(0.6);
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
