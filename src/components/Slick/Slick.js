@@ -15,30 +15,30 @@ const Slick = () => {
   const settings = {
     dots: true,
     className: "center",
-    centerMode: true,
+    // centerMode: true,
     infinite: true,
-    centerPadding: "60px",
+    // centerPadding: "60px",
     draggable: true,
     touchMove: true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     speed: 500,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-        },
-      },
-      {
-        breakpoint: 820,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+    // responsive: [
+    //   {
+    //     breakpoint: 1024,
+    //     settings: {
+    //       slidesToShow: 3,
+    //       slidesToScroll: 3,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 820,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       slidesToScroll: 1,
+    //     },
+    //   },
+    // ],
   };
   return (
     <Slider {...settings} className="slider">

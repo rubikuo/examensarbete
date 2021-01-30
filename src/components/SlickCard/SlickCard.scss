@@ -2,12 +2,14 @@
 
 .SlickCard {
   background-color: grey;
-  width: 83.4%;
-
+  width: 80%;
   height: 80vh;
   max-height: 300px;
   border-radius: 5%;
   position: relative;
+  padding: 10px;
+  // margin: 0;
+  // filter: brightness(0.5);
 
   @extend %col-mid;
 
@@ -40,7 +42,7 @@
     padding: 10px;
   }
   img {
-    width: 80%;
+    width: 70%;
   }
   &__myTrello {
     @include bgImg(
@@ -109,12 +111,16 @@
   }
 }
 .slick-slide.slick-center div.SlickCard {
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
+  // -ms-transform: scale(1.2);
+  // transform: scale(1.2);
+  // filter: brightness(1);
 }
 
 .slick-list {
-  padding: 100px 90px 0px 90px !important;
-
-  height: 500px;
+  width: 100% !important;
+  min-width: 400px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px 10% 0px 10% !important;
+  height: 400px;
 }

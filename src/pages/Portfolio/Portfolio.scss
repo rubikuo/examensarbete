@@ -5,7 +5,9 @@
   min-height: 100vh;
   &__section {
     &-develop {
-      height: 100vh;
+      margin-top: 80px;
+
+      min-height: calc(100vh - 80px);
       padding: 10%;
       background-color: grey;
     }
