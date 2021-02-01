@@ -3,14 +3,14 @@
 
 .Home {
   min-height: 100vh;
+
   position: relative;
   overflow: hidden;
-  font-family: "Merienda", cursive;
 
   @include bgImg(
     "../assets/home/cherryTree-grouped.png",
     fixed,
-    cover,
+    contain,
     $bgDawn,
     $bgLightBlue
   );
@@ -150,35 +150,35 @@
     text-align: center;
     overflow: hidden;
     padding: 0.5rem;
+    text-shadow: 1px 1px 1px rgb(173, 173, 173);
   }
   &__title {
     &-name {
       @extend %main-font;
       font-size: 4rem;
+      color: black;
     }
     &-typedText {
       @extend %content-font;
       font-size: 1.8rem;
       font-weight: 700;
-
-      // text-shadow: 0 1px 1px black;
-      // color: #ffffff;
     }
     &-cursor {
       display: inline-block;
       width: 3px;
-      background-color: #f0f0f0;
+      background-color: #eb4848;
       margin-left: 0.1rem;
       animation: blink 1s infinite;
       font-size: 1.8rem;
       &--typing {
-        background-color: #f0f0f0;
+        background-color: #f8f8f8;
         animation: none;
       }
     }
     &-time {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       @extend %content-font;
+      text-shadow: 1px 1px 1px rgb(155, 155, 155);
     }
   }
 
@@ -187,20 +187,26 @@
     margin: 0 10px;
   }
   &__btn {
-    width: 100px;
-    margin-top: 50px;
-    line-height: 2rem;
-    font-size: 1.2rem;
-    font-family: "Merienda", cursive;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.372);
+    width: 18rem;
+    margin-top: 60px;
+    line-height: 3.5rem;
+    font-size: 2rem;
+    @extend %main-font;
+    font-weight: 700;
+    border-radius: 2px;
+    background-color: rgba(31, 31, 31, 0.52);
     text-align: center;
     text-decoration: none;
+    color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 1px rgb(155, 155, 155);
     &--show {
       animation: showTime 2.5s;
     }
     &--hide {
       opacity: 0;
+    }
+    &:hover {
+      background-color: rgb(26, 26, 26);
     }
   }
 }
@@ -232,10 +238,10 @@
 
 @keyframes blink {
   0% {
-    background-color: #f0f0f0;
+    background-color: #ffffff;
   }
   49% {
-    background-color: #f0f0f0;
+    background-color: #ffffff;
   }
   50% {
     background-color: transparent;
@@ -244,7 +250,13 @@
     background-color: transparent;
   }
   100% {
-    background-color: #f0f0f0;
+    background-color: #ffffff;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .Home {
+    background-size: cover;
   }
 }
 

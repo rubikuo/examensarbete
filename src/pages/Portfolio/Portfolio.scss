@@ -4,11 +4,13 @@
 .Portfolio {
   min-height: 100vh;
   margin-top: 80px;
+
   &__section {
     &-develop {
       width: 100%;
       min-height: calc(100vh - 80px);
-      @extend %row-mid;
+      @extend %col-mid;
+      justify-content: flex-start;
       @include bgImg(
         "../assets/about/Lantern.png",
         fixed,
@@ -27,5 +29,10 @@
 @media screen and (max-width: 900px) {
   .Portfolio {
     margin-top: 60px;
+    &__section {
+      &-develop {
+        min-height: calc(100vh - 60px);
+      }
+    }
   }
 }

@@ -1,12 +1,41 @@
 @import "../../style/SassVariables";
 
 .Options {
-  margin: 0px auto 10px auto;
+  margin: 30px auto 10px auto;
   @extend %row-mid;
-  width: 70%;
-  min-width: 350px;
+  width: 72%;
+  min-width: 380px;
   flex-wrap: wrap;
-
-  top: 100px;
+  top: 80px;
   height: 10%;
+  position: absolute;
+
+  &__imgWrapper {
+    width: 30px;
+    position: absolute;
+    left: -25px;
+    top: 3px;
+  }
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    filter: drop-shadow(1px 1px 0px rgb(207, 126, 203));
+  }
+
+  &__btn {
+    @extend %main-font, %row-mid;
+    font-weight: 700;
+    margin: 10px 15px;
+    padding: 3px 12px;
+    position: relative;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    p {
+      font-size: 1.9rem;
+      text-shadow: 1px 1px 1px rgb(180, 180, 180);
+      color: rgb(63, 63, 63);
+    }
+  }
 }

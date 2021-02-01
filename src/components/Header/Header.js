@@ -89,7 +89,7 @@ const Header = () => {
                   className="Header__nav-link"
                   activeClassName="selected"
                   activeStyle={{ color: "#fcba58" }}
-                  to="/#myskill"
+                  to="/resume"
                   onClick={() => {
                     setShowMenu(false);
                   }}

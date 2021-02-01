@@ -29,7 +29,6 @@
   font-family: "Kaushan Script", cursive;
   font-size: 2.3rem;
   letter-spacing: 1.2px;
-  color: #252525;
 }
 
 %content-font {
@@ -63,11 +62,11 @@
 }
 
 %radius {
-  border-radius: 30px;
+  border-radius: 8px;
 }
 
-$bgDawn: rgba(241, 192, 161, 0.171);
-$bgLightBlue: rgba(77, 125, 165, 0.116);
+$bgDawn: rgba(236, 221, 212, 0.479);
+$bgLightBlue: rgba(141, 163, 180, 0.322);
 
 @mixin bgImg($url, $attach, $size, $lowerBgColor, $higherBgColor) {
   background: linear-gradient(0deg, $lowerBgColor, $higherBgColor), url(#{$url});

@@ -2,9 +2,8 @@
 
 .Projects {
   width: 80%;
-  margin: 20px auto 0 auto;
+  margin: 130px auto 0 auto;
   @extend %col;
-  position: relative;
 
   &__wrapper {
     @extend %row-mid;
@@ -16,12 +15,19 @@
     width: 60%;
   }
 
-  button {
-    @extend %main-font;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 10px 15px;
-    padding: 5px 10px;
+  &__btn {
+    &-detail {
+      color: white;
+      background-color: transparent;
+      @extend %main-font, %row-mid;
+      font-weight: 700;
+      margin: 10px 15px;
+      padding: 3px 12px;
+      position: relative;
+      border: none;
+      outline: none;
+      background-color: transparent;
+    }
   }
 
   &__project {
@@ -32,9 +38,10 @@
     background-color: white;
     margin: 15px;
     flex-grow: 1;
-    box-shadow: 1px 1px 2px 1px rgb(109, 106, 106);
+    box-shadow: 1px 1px 4px 0px rgb(58, 58, 58);
     position: relative;
     @extend %col-mid, %radius;
+
     transform-style: preserve-3d;
 
     &--all {
@@ -55,7 +62,7 @@
       height: 100%;
       background-color: rgb(34, 33, 33);
       color: whitesmoke;
-      padding: 2rem;
+      padding: 20px 30px;
       font-size: 2rem;
       @extend %col, %radius;
       justify-content: space-around;
@@ -160,5 +167,11 @@
       opacity: 1;
       transform: scale(1);
     }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .Projects {
+    margin-top: 190px;
   }
 }
