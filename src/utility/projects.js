@@ -6,7 +6,7 @@ import TicTacToeLogo from "../assets/portfolio/TicTacToeLogo.png";
 import MdSimpleLogo from "../assets/portfolio/MdSimpleLogo.png";
 import PrimeSwedenLogo from "../assets/portfolio/PrimeSwedenLogo.png";
 
-export const data = [
+const data = [
   {
     project: "MyTrello",
     id: 1,
@@ -18,7 +18,7 @@ export const data = [
     imgSrc: `${myTrelloLogo}`,
     details:
       "A mimic app of Trello website. It is my first full stack MERN project and the entire UI and UX design is developed in scss. The graphic images are genuine work created by Adobe Photoshop and Illustrator.",
-    gitHubUrl: "https://github.com/rubikuo/MyTrello",
+    gitHubUrl: "//github.com/rubikuo/MyTrello",
   },
   {
     project: "CloudyBox",
@@ -29,8 +29,8 @@ export const data = [
     url: "//cloudybox.surge.sh/",
     imgSrc: `${CloudyBoxLogo}`,
     details:
-      "A React app using DropBox API and is implemented with Oauth authorization framework.",
-    gitHubUrl: "https://github.com/rubikuo/CloudyBox",
+      "A React app using DropBox API, implemented with Oauth authorization framework.",
+    gitHubUrl: "//github.com/rubikuo/CloudyBox",
   },
 
   {
@@ -43,11 +43,12 @@ export const data = [
     imgSrc: `${iQuizLogo}`,
     details:
       "A React app using Open Triva DB API. The development is mainly focus on UX design and ARIA tags for increasing web accessibility.",
-    gitHubUrl: "https://github.com/rubikuo/iQuiz",
+    gitHubUrl: "//github.com/rubikuo/iQuiz",
   },
   {
     project: "HBGWifiFinder",
     id: 4,
+    type: "Front-end",
     technics:
       "Angular7, TypeScript, Firebase, Helsingborg City API, BootStrap, Mapbox GL",
     hashtag: [
@@ -61,7 +62,7 @@ export const data = [
     imgSrc: `${HBGLogo}`,
     details:
       "An Angular app using Helsingborg city open API to improve the social integration for the locals and the visitors in Helsingborg. Using Firebase to handle login authentication and Mapbox GL showing the wifi's geolocation",
-    gitHubUrl: "https://github.com/rubikuo/HBG-WifiFinder",
+    gitHubUrl: "//github.com/rubikuo/HBG-WifiFinder",
   },
   {
     project: "MdSimple",
@@ -80,7 +81,7 @@ export const data = [
     imgSrc: `${MdSimpleLogo}`,
     details:
       "An React app focused on UX design by using SASS to mockup functions, styles, and measurement of TextField, Switch, Checkbox, RadioButto from Material Design.",
-    gitHubUrl: "https://github.com/rubikuo/MdSimple",
+    gitHubUrl: "//github.com/rubikuo/MdSimple",
   },
   {
     project: "TicTacToe",
@@ -92,7 +93,7 @@ export const data = [
     imgSrc: `${TicTacToeLogo}`,
     details:
       "A tic tac toc game developed by pure JavaScript. Css animation is implemented for creating the dynamic visual effect in the background.",
-    gitHubUrl: "https://github.com/rubikuo/Tic-Tac-Toe",
+    gitHubUrl: "//github.com/rubikuo/Tic-Tac-Toe",
   },
   {
     project: "PrimeSweden",
@@ -104,6 +105,17 @@ export const data = [
     imgSrc: `${PrimeSwedenLogo}`,
     details:
       "A fashion E-commerce mockup website to mimic product presenting, price sorting, shopping cart handling. Web responsive is implemented.",
-    gitHubUrl: "https://github.com/rubikuo/Prime-Sweden",
+    gitHubUrl: "//github.com/rubikuo/Prime-Sweden",
   },
 ];
+
+const projectTypes = [
+  "All",
+  "ReactJS",
+  "Angular7",
+  "Node.js",
+  "JavaScript",
+  "jQuery",
+];
+
+export { data, projectTypes };

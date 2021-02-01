@@ -3,17 +3,29 @@
 
 .Portfolio {
   min-height: 100vh;
+  margin-top: 80px;
   &__section {
     &-develop {
-      margin-top: 80px;
       width: 100%;
       min-height: calc(100vh - 80px);
-      padding: 10%;
       @extend %row-mid;
+      @include bgImg(
+        "../assets/about/Lantern.png",
+        fixed,
+        cover,
+        $bgDawn,
+        $bgLightBlue
+      );
     }
     &-design {
       height: 100vh;
       background-color: rgb(210, 246, 255);
     }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .Portfolio {
+    margin-top: 60px;
   }
 }

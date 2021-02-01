@@ -27,9 +27,13 @@
 /* font styles */
 %main-font {
   font-family: "Kaushan Script", cursive;
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   letter-spacing: 1.2px;
   color: #252525;
+}
+
+%content-font {
+  font-family: "Merienda", cursive;
 }
 
 %title-font {

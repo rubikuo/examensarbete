@@ -145,7 +145,6 @@
     }
   }
   p {
-    font-size: 3rem;
     font-weight: bold;
     letter-spacing: 0.1rem;
     text-align: center;
@@ -154,16 +153,16 @@
   }
   &__title {
     &-name {
-      font-size: 6rem;
-      color: #ffffff;
-      text-shadow: 0 1px 1px black;
+      @extend %main-font;
+      font-size: 4rem;
     }
     &-typedText {
-      font-family: "Merienda", cursive;
+      @extend %content-font;
       font-size: 1.8rem;
-      font-weight: normal;
-      text-shadow: 0 1px 1px black;
-      color: #ffffff;
+      font-weight: 700;
+
+      // text-shadow: 0 1px 1px black;
+      // color: #ffffff;
     }
     &-cursor {
       display: inline-block;
@@ -179,8 +178,7 @@
     }
     &-time {
       font-size: 1.5rem;
-      text-shadow: 0 1px 1px black;
-      color: #ffffff;
+      @extend %content-font;
     }
   }
 

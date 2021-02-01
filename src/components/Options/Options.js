@@ -1,12 +1,12 @@
 import React from "react";
 import "./Options.scss";
-const Options = ({ types, controlContent }) => {
+const Options = ({ projectTypes, controlContent, type }) => {
   return (
     <div className="Options">
-      {types.map((type) => {
+      {projectTypes.map((projectType) => {
         return (
-          <button key={type} onClick={() => controlContent(type)}>
-            {type}
+          <button key={projectType} onClick={() => controlContent(projectType)}>
+            {projectType}
           </button>
         );
       })}

@@ -1,15 +1,19 @@
+@import "../../style/SassVariables";
+
 .Modal {
   width: 80vw;
   max-width: 750px;
-  height: 80vh;
-  position: absolute;
+  height: 72vh;
+  position: fixed;
   margin-top: 40px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: rgb(245, 238, 242);
   padding: 50px;
   z-index: 1000;
+
+  @extend %radius;
 
   &__overlay {
     position: fixed;
@@ -19,5 +23,50 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 999;
+  }
+  &__wrapper {
+    width: 200px;
+    @extend %row-between;
+    margin: 50px auto 0 auto;
+  }
+  &__link {
+    @extend %main-font, %col-mid;
+    font-weight: 700;
+  }
+  &__icon {
+    font-size: 1.7em;
+  }
+  &__imgCtn {
+    width: 200px;
+  }
+  &__img {
+    &-logo {
+      width: 100%;
+      object-fit: cover;
+      transform: scale(0.8);
+      // margin-bottom: 15px;
+      filter: contrast(2) drop-shadow(2px 2px 2px rgb(124, 123, 123));
+    }
+  }
+  &__details,
+  &__technics {
+    margin: 20px auto;
+    font-style: italic;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+  }
+  &__technics {
+    margin: 10px auto;
+  }
+  &__subTitle {
+    @extend %main-font;
+    font-weight: 700;
+  }
+  &__btn {
+    &-close {
+      position: absolute;
+      top: 8%;
+      right: 5%;
+    }
   }
 }
