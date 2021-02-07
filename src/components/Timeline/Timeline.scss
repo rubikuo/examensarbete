@@ -1,0 +1,30 @@
+@import "../../style/SassVariables";
+.Timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+  display: block;
+
+  &__title {
+    font-size: 2rem;
+    @extend %content-font;
+  }
+
+  &__subtitle {
+    font-size: 1.3rem;
+    @extend %content-font;
+  }
+  &__date {
+    font-size: 1.3rem !important;
+    @extend %main-font;
+    font-weight: 700 !important;
+    float: right !important;
+    color: black;
+  }
+  &__para {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px;
+    @extend %content-font;
+  }
+}

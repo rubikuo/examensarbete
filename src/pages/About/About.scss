@@ -135,9 +135,9 @@
   &__article {
     &-intro {
       position: absolute;
-      width: 400px;
+      width: 415px;
       left: 10%;
-      top: 25%;
+      top: 15%;
       @extend %main-font;
     }
   }
@@ -166,6 +166,37 @@
     &__para-intro {
       font-size: 1.5rem;
     }
+  }
+}
+
+@keyframes leftFace {
+  from {
+    left: 15%;
+    opacity: 0;
+  }
+  to {
+    left: 50%;
+    opacity: 1;
+  }
+}
+@keyframes rightFace {
+  from {
+    right: 15%;
+    opacity: 0;
+  }
+
+  to {
+    right: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes bg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

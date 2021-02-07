@@ -25,12 +25,14 @@ const About = () => {
           <article className="About__article-intro">
             <h1 className="About__title About__title-name">Rubi Kuo</h1>
             <p className="About__para-intro">
-              An ambitious front-end developer with 8 years of work experiences
-              in international projects and 2.5 year experiences in web
-              development and UX design. I come from Taiwan and for now I am
+              Hi! I am an ambitious front-end developer with 8 years of work
+              experiences in international projects and 2.5 year experiences in
+              web development and UX design. I come from Taiwan and for now I am
               based in Helsingborg Sweden.
-              <br />I have a keen interest in arts, and I am an excessive
-              monopoly player!
+              <br />
+              <br />
+              Besides coding, I have a keen interest in arts, and I am an
+              excessive monopoly player!
             </p>
           </article>
         </section>
@@ -38,7 +40,6 @@ const About = () => {
         <section id="skill" className="About__section About__section-skill">
           <div className="About__leftSide">
             <img
-              // data-aos="flip-right"
               className=" About__image About__image-leftFace"
               src={LeftFace}
               alt=""
@@ -63,12 +64,7 @@ const About = () => {
           </div>
 
           <div className="About__rightSide">
-            <img
-              // data-aos="flip-left"
-              className=" About__image-rightFace"
-              src={RightFace}
-              alt=""
-            />
+            <img className=" About__image-rightFace" src={RightFace} alt="" />
             <NavHashLink
               smooth
               to="/portfolio/#design"

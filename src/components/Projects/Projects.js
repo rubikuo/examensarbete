@@ -45,7 +45,7 @@ const Projects = ({ type, setType, classes, setClasses }) => {
                       onClick={() => setOpenModal(ea.project)}
                       onClose={() => setOpenModal(null)}
                     >
-                      View Details
+                      Learn More
                     </button>
                   </div>
                   <img src={ea.imgSrc} alt="logo" />
@@ -73,11 +73,11 @@ const Projects = ({ type, setType, classes, setClasses }) => {
                         </Modal>
                       )}
                       <button
-                        className="Projects__btn-detail"
+                        className="Projects__btn Projects__btn-detail"
                         onClick={() => setOpenModal(ea.project)}
                         onClose={() => setOpenModal(null)}
                       >
-                        View Details
+                        Learn More
                       </button>
                     </div>
                     <img src={ea.imgSrc} alt="logo" />

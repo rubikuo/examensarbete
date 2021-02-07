@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Modal.scss";
 import ReactDom from "react-dom";
 import { FaGithub } from "react-icons/fa";
-import { MdWeb } from "react-icons/md";
+import { MdWeb, MdClose } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { HandleBgScroll } from "../../utility/functions";
+import screen from "../../assets/portfolio/Screen.png";
+import trello from "../../assets/portfolio/trello.png";
 
 const Modal = ({ open, onClose, project }) => {
   HandleBgScroll(open);
@@ -14,18 +16,11 @@ const Modal = ({ open, onClose, project }) => {
     <>
       <div className="Modal__overlay" onClick={onClose} />
       <div className="Modal">
-        <div className="Modal__imgCtn">
-          <img
-            className="Modal__img Modal__img-logo"
-            src={project.imgSrc}
-            alt={project.project}
-          />
-        </div>
-
-        <div>
-          <p className="Modal__details">{project.details}</p>
-          <h2 className="Modal__subTitle">Technics</h2>
-          <p className="Modal__technics">{project.technics}</p>
+        <div className="Modal__section Modal__section-left">
+          <h1 className="Modal__project-title">{project.project}</h1>
+          <p className="Modal__project-details">{project.details}</p>
+          <h2 className="Modal__project-subTitle">Technologies</h2>
+          <p className="Modal__project-technology">{project.technics}</p>
           <div className="Modal__wrapper">
             <Link
               target="_blank"
@@ -41,8 +36,12 @@ const Modal = ({ open, onClose, project }) => {
             </Link>
           </div>
         </div>
-        <button className="Modal__btn-close" onClick={onClose}>
-          Close
+        <div className="Modal__section Modal__section-right">
+          <img className="Modal__img-screen" src={screen} alt="" />
+          <img className="Modal__img Modal__img-project" src={trello} alt="" />
+        </div>
+        <button className="Modal__btn Modal__btn-close" onClick={onClose}>
+          <MdClose />
         </button>
       </div>
     </>,

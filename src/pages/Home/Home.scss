@@ -191,22 +191,17 @@
     margin-top: 60px;
     line-height: 3.5rem;
     font-size: 2rem;
-    @extend %main-font;
+    @extend %main-font, %greyBtn;
     font-weight: 700;
     border-radius: 2px;
-    background-color: rgba(31, 31, 31, 0.52);
-    text-align: center;
+
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    box-shadow: 1px 1px 1px rgb(155, 155, 155);
+
     &--show {
       animation: showTime 2.5s;
     }
     &--hide {
       opacity: 0;
-    }
-    &:hover {
-      background-color: rgb(26, 26, 26);
     }
   }
 }

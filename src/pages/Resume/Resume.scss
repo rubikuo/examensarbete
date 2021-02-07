@@ -1,1 +1,19 @@
 @import "../../style/SassVariables";
+
+.Resume {
+  margin-top: 80px;
+  // background-color: grey;
+  @include bgImg("", scroll, cover, $bgLightBlue, $bgDawn);
+
+  &__section {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+    &-title {
+      text-align: center;
+      font-size: 3rem;
+      margin: 40px 0px 50px 0px;
+      @extend %main-font;
+    }
+  }
+}
