@@ -1,50 +1,20 @@
 @import "../../style/SassVariables";
-
-.About {
-  // min-height: 100vh;
+.Skills {
   &__section {
     position: relative;
-    height: 100vh;
-    &-intro {
-      position: relative;
 
-      @include bgImg(
-        "../assets/about/CherryBlossom.png",
-        fixed,
-        cover,
-        $bgLightBlue,
-        $bgDawn
-      );
-    }
-    // &-skill {
-    //   @include bgImg(
-    //     "../assets/about/padalsBG.png",
-    //     scroll,
-    //     cover,
-    //     $bgDawn,
-    //     $bgLightBlue
-    //   );
-
-    //   width: 100%;
-    //   padding-top: 56.25%;
-    //   overflow: hidden;
-    // }
-  }
-
-  &__title {
-    @extend %main-font;
-    font-size: 4vw;
-
-    &-name {
-      margin: 0 0 10px 0;
+    &-skill {
+      width: 100%;
+      padding-top: 56.25%;
+      overflow: hidden;
     }
   }
 
   &__image {
     position: absolute;
-    top: 64%;
+    top: 48%;
     left: 50%;
-    width: 48%;
+    width: 45%;
 
     &-anime {
       left: 50%;
@@ -76,9 +46,9 @@
       transform: translate(-50%, -50%);
     }
     &-rightFace {
-      width: 48%;
+      width: 45%;
       position: absolute;
-      top: 64%;
+      top: 48%;
       right: 50.05%;
       animation: rightFace 1s ease-in;
       transform: translate(50%, -50%);
@@ -96,7 +66,7 @@
     text-decoration: none;
     top: 42%;
     @extend %main-font;
-    font-size: 3.6vw;
+    font-size: 3vw;
     font-weight: 600;
     z-index: 2;
     cursor: pointer;
@@ -128,24 +98,6 @@
         opacity: 0;
       }
     }
-  }
-
-  &__article {
-    &-intro {
-      position: absolute;
-      width: 415px;
-      left: 10%;
-      top: 22%;
-      @extend %main-font;
-    }
-  }
-
-  &__para-intro {
-    @extend %content-font;
-    font-weight: 700;
-    font-size: 2rem;
-    letter-spacing: 1.3px;
-    color: rgb(73, 73, 73);
   }
 }
 
@@ -183,7 +135,9 @@
 @media screen and (max-width: 900px) {
   .About {
     &__section {
-      min-height: 100vh;
+      &-intro {
+        max-height: 420px;
+      }
     }
     &__article {
       &-intro {

@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { NavHashLink } from "react-router-hash-link";
+// import { NavHashLink } from "react-router-hash-link";
 import "./About.scss";
-import RubiOrigin from "../../assets/about/RubiOrigin.png";
-import RubiAnime from "../../assets/about/Rubi.png";
-import RightFace from "../../assets/about/RubiHalfRight.png";
-import LeftFace from "../../assets/about/RubiHalfLeft.png";
+// import RubiOrigin from "../../assets/about/RubiOrigin.png";
+// import RubiAnime from "../../assets/about/Rubi.png";
+// import RightFace from "../../assets/about/RubiHalfRight.png";
+// import LeftFace from "../../assets/about/RubiHalfLeft.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const About = () => {
-  const [showOrigin, setShowOrigin] = useState(false);
-  const [showAnime, setShowAnime] = useState(false);
+  // const [showOrigin, setShowOrigin] = useState(false);
+  // const [showAnime, setShowAnime] = useState(false);
   useEffect(() => {
     AOS.init();
   }, []);
@@ -22,7 +22,7 @@ const About = () => {
       </Helmet>
       <main className="About">
         <section className="About__section About__section-intro">
-          <article className="About__article-intro">
+          <article data-aos="fade-right" className="About__article-intro">
             <h1 className="About__title About__title-name">Rubi Kuo</h1>
             <p className="About__para-intro">
               Hi! I am an ambitious front-end developer with 8 years of work
@@ -37,7 +37,7 @@ const About = () => {
           </article>
         </section>
 
-        <section id="skill" className="About__section About__section-skill">
+        {/* <section id="skill" className="About__section About__section-skill">
           <div className="About__leftSide">
             <img
               className=" About__image About__image-leftFace"
@@ -103,7 +103,7 @@ const About = () => {
             src={RubiOrigin}
             alt=""
           />
-        </section>
+        </section> */}
       </main>
     </>
   );

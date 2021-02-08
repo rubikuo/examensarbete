@@ -1,6 +1,8 @@
 @import "../../style/SassVariables";
 
 .Resume {
+  min-height: calc(100vh -80px);
+  margin-top: 80px;
   @include bgImg(
     "../assets/about/Lantern.png",
     fixed,
@@ -10,19 +12,45 @@
   );
 
   &__section {
-    width: 90%;
-    margin: 0 auto;
-    padding-top: 20px;
-    &-title {
-      text-align: center;
-      font-size: 3rem;
-      margin: 40px 0px 50px 0px;
-      @extend %main-font;
+    min-height: 100vh;
+    width: 92%;
+    margin: 0px auto;
+    position: relative;
+    padding-top: 5px;
+    &-experience {
+      padding-bottom: 20px;
     }
+  }
 
-    &-skills,
-    &-hackathon {
-      min-height: calc(100vh - 80px);
+  &__title {
+    font-size: 2.4vw;
+    text-align: right;
+    @extend %main-font;
+    // text-decoration: underline;
+    // text-underline-offset: 6px;
+    margin: 20px 0 20px 0;
+    border-bottom: 2px solid rgb(161, 161, 161);
+    padding: 0 0 4px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .Resume {
+    margin-top: 60px;
+    &__section {
+      margin-top: 60px;
     }
   }
 }
+
+// @media screen and (max-width: 550px) {
+//   .Resume {
+//     &__section {
+//       min-height: 60vh;
+//       margin: 5px auto;
+//     }
+//     // &__title {
+//     //   font-size: 2.2rem;
+//     // }
+//   }
+// }

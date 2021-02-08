@@ -9,7 +9,7 @@ import "react-vertical-timeline-component/style.min.css";
 
 const Timeline = () => {
   return (
-    <VerticalTimeline>
+    <VerticalTimeline className="Timeline">
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
         contentStyle={{
