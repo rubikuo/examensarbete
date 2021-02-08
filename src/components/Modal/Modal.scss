@@ -1,10 +1,10 @@
 @import "../../style/SassVariables";
 
 .Modal {
-  width: 80vw;
+  width: 82vw;
   max-width: 850px;
+  min-width: 600px;
   height: 72vh;
-
   position: fixed;
   margin-top: 40px;
   top: 50%;
@@ -13,11 +13,8 @@
   background-color: rgb(245, 238, 242);
   padding: 20px 30px;
   z-index: 1000;
-  @extend %row-mid;
-  overflow: scroll;
 
   @extend %radius;
-  flex-wrap: wrap;
 
   &__overlay {
     position: fixed;
@@ -28,26 +25,33 @@
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 999;
   }
+
+  &__ctn {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    position: relative;
+    @extend %row-mid;
+    flex-wrap: wrap;
+  }
   &__wrapper {
-    width: 150px;
+    width: 80%;
     @extend %row-between;
 
     // justify-content: flex-start;
     margin-top: 40px;
   }
   &__link {
-    @extend %main-font, %col-mid;
+    @extend %main-font, %row-mid, %greyBtn;
     font-weight: 700;
     font-size: 1.5rem;
+    width: 100%;
+    margin: 10px;
 
-    &:hover {
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-    &:active,
-    &:focus {
-      color: grey;
-    }
+    // &:active,
+    // &:focus {
+    //   color: grey;
+    // }
   }
   &__icon {
     font-size: 1.7em;
@@ -88,7 +92,7 @@
       max-height: 500px;
     }
     &-right {
-      min-width: 390px;
+      min-width: 360px;
       height: 350px;
       position: relative;
       overflow: hidden;
@@ -125,7 +129,7 @@
       cursor: pointer;
     }
     &-close {
-      position: absolute;
+      position: fixed;
       top: 4%;
       right: 3%;
       width: 35px;
@@ -139,6 +143,36 @@
 
       &:active {
         outline: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .Modal {
+    &__section {
+      width: 90%;
+      &-left {
+        height: auto;
+      }
+      &-right {
+        margin-left: 200px;
+      }
+    }
+    &__wrapper {
+      width: 25%;
+      position: absolute;
+      top: 70%;
+      flex-direction: column;
+    }
+
+    &__img {
+      &-screen {
+        width: 330px;
+      }
+      &-project {
+        width: 330px;
+        height: 62%;
       }
     }
   }

@@ -1,7 +1,6 @@
 import React from "react";
 import "./Options.scss";
 import flower from "../../assets/portfolio/Blossom.png";
-import { MdTranslate } from "react-icons/md";
 
 const Options = ({ projectTypes, controlContent, type }) => {
   return (

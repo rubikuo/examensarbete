@@ -85,7 +85,7 @@ const Header = () => {
                 </NavLink>
               </li>
               <li className="Header__nav-item">
-                <NavHashLink
+                <NavLink
                   className="Header__nav-link"
                   activeClassName="selected"
                   activeStyle={{ color: "#fcba58" }}
@@ -95,7 +95,7 @@ const Header = () => {
                   }}
                 >
                   Resume
-                </NavHashLink>
+                </NavLink>
               </li>
             </ul>
           </nav>

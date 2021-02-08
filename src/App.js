@@ -13,13 +13,12 @@ const App = () => {
     <HelmetProvider>
       <Router primary={false}>
         <Header />
-
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/about" component={About} />
-        <Route path="/portfolio" component={Portfolio} />
-        <Route path="/resume" component={Resume} />
+        <div className="mainWrapper">
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/portfolio" component={Portfolio} />
+          <Route path="/resume" component={Resume} />
+        </div>
       </Router>
     </HelmetProvider>
   );

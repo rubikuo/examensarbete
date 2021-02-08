@@ -1,5 +1,4 @@
 @import "../../style/SassVariables";
-@import url("https://fonts.googleapis.com/css2?family=Merienda&family=Merienda+One&display=swap");
 
 .About {
   &__section {
@@ -7,7 +6,7 @@
 
     &-intro {
       height: 100vh;
-      max-height: 600px;
+      max-height: 550px;
       position: relative;
 
       @include bgImg(
@@ -151,24 +150,6 @@
   }
 }
 
-@media screen and (max-width: 900px) {
-  .About {
-    &__section {
-      &-intro {
-        max-height: 450px;
-      }
-    }
-    &__article {
-      &-intro {
-        top: 35%;
-      }
-    }
-    &__para-intro {
-      font-size: 1.5rem;
-    }
-  }
-}
-
 @keyframes leftFace {
   from {
     left: 15%;
@@ -200,8 +181,20 @@
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (max-width: 900px) {
   .About {
-    margin-top: 80px;
+    &__section {
+      &-intro {
+        max-height: 420px;
+      }
+    }
+    &__article {
+      &-intro {
+        top: 20%;
+      }
+    }
+    &__para-intro {
+      font-size: 1.5rem;
+    }
   }
 }

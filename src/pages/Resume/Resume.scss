@@ -1,9 +1,13 @@
 @import "../../style/SassVariables";
 
 .Resume {
-  margin-top: 80px;
-  // background-color: grey;
-  @include bgImg("", scroll, cover, $bgLightBlue, $bgDawn);
+  @include bgImg(
+    "../assets/about/Lantern.png",
+    fixed,
+    cover,
+    $bgLightBlue,
+    $bgDawn
+  );
 
   &__section {
     width: 90%;
@@ -14,6 +18,11 @@
       font-size: 3rem;
       margin: 40px 0px 50px 0px;
       @extend %main-font;
+    }
+
+    &-skills,
+    &-hackathon {
+      min-height: calc(100vh - 80px);
     }
   }
 }

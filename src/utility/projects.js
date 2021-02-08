@@ -46,7 +46,7 @@ const data = [
     gitHubUrl: "//github.com/rubikuo/iQuiz",
   },
   {
-    project: "HBGWifiFinder",
+    project: "HBG WifiFinder",
     id: 4,
     type: "Front-end",
     technics:
