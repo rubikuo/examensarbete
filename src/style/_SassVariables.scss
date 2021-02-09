@@ -97,6 +97,14 @@
 $bgDawn: rgba(236, 221, 212, 0.479);
 $bgLightBlue: rgba(141, 163, 180, 0.322);
 
+@mixin transEffect($sec, $effect) {
+  transition: $sec all $effect;
+  -webkit-transition: $sec all $effect;
+  -moz-transition: $sec all $effect;
+  -ms-transition: $sec all $effect;
+  -o-transition: $sec all $effect;
+}
+
 @mixin bgImg($url, $attach, $size, $lowerBgColor, $higherBgColor) {
   background: linear-gradient(0deg, $lowerBgColor, $higherBgColor), url(#{$url});
   background-position: left;

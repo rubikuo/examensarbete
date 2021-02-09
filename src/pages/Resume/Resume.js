@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./Resume.scss";
 import Timeline from "../../components/Timeline/Timeline";
 import { Link } from "react-router-dom";
@@ -8,6 +8,13 @@ import Skills from "../../components/Skills/Skills";
 import AOS from "aos";
 
 const Resume = () => {
+  const [showOrigin, setShowOrigin] = useState(false);
+  const [showAnime, setShowAnime] = useState(false);
+  const [showDevSkills, setShowDevSkills] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     AOS.init();
   }, []);
@@ -18,18 +25,30 @@ const Resume = () => {
       </Helmet>
       <main className="Resume">
         <section id="skills" className="Resume__section Resume__section-skills">
-          {/* <div className="Resume__titleWrapper">
-            <hr className="Resume__hr Resume__hr-left" />
-            <h1 className="Resume__title Resume__title-skills ">Skills</h1>
-            <hr className="Resume__hr Resume__hr-right" />
-          </div> */}
           <h1
             data-aos="fade-left"
             className="Resume__title Resume__title-skills "
           >
             Skills
           </h1>
-          <Skills />
+          <Skills
+            showOrigin={showOrigin}
+            setShowOrigin={setShowOrigin}
+            showAnime={showAnime}
+            setShowAnime={setShowAnime}
+            showDevSkills={showDevSkills}
+            setShowDevSkills={setShowDevSkills}
+          />
+          <div
+            className="Resume__devSkills"
+            style={showDevSkills ? { right: "0%" } : { right: "-50%" }}
+          >
+            <p>HTML</p>
+            <p>CSS / Sass</p>
+            <p>JavaScript</p>
+
+            <button onClick={() => setShowDevSkills(false)}> >> </button>
+          </div>
           <NavHashLink to="/resume/#experience" smooth>
             down
           </NavHashLink>
@@ -44,13 +63,6 @@ const Resume = () => {
           >
             Work Experience &amp; Education
           </h1>
-          {/* <div className="Resume__titleWrapper">
-            <hr className="Resume__hr Resume__hr-left" />
-            <h1 className="Resume__title Resume__title-experience">
-              Work Experience &amp; Education
-            </h1>
-            <hr className="Resume__hr Resume__hr-right" />
-          </div> */}
 
           <Timeline />
           <NavHashLink to="/resume/#hackathon" smooth>
@@ -62,17 +74,18 @@ const Resume = () => {
           id="hackathon"
           className="Resume__section Resume__section-hackathon"
         >
-          {/* <div className="Resume__titleWrapper">
-            <hr className="Resume__hr Resume__hr-left" />
-            <h1 className="Resume__title Resume__title-hackathon">Hackathon</h1>
-            <hr className="Resume__hr Resume__hr-right" />
-          </div> */}
           <h1
             data-aos="fade-left"
             className="Resume__title Resume__title-hackathon"
           >
             Hackathon
           </h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus iste
+            molestiae, quae fuga, sapiente quaerat delectus veritatis autem
+            aspernatur iure quo? Dolorum, accusantium. Quia maxime rerum vero
+            quidem nam vitae.
+          </p>
         </section>
 
         <Link to="JuIKuo-CV.pdf" target="_blank" download>

@@ -8,7 +8,13 @@
       width: 100%;
       @extend %col-mid;
       justify-content: flex-start;
-      @include bgImg("", fixed, contain, $bgDawn, $bgLightBlue);
+      @include bgImg(
+        "../assets/about/padalsBG.png",
+        fixed,
+        contain,
+        $bgDawn,
+        $bgLightBlue
+      );
       background-position: right;
     }
     // &-design {

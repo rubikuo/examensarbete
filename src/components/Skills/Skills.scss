@@ -7,6 +7,7 @@
       width: 100%;
       padding-top: 56.25%;
       overflow: hidden;
+      margin: 0;
     }
   }
 
@@ -29,7 +30,7 @@
       }
     }
     &-origin {
-      transition: 1s ease-in;
+      @include transEffect(2s, ease-in);
       left: 50%;
       transform: translate(-50%, -50%);
 
@@ -39,6 +40,10 @@
       }
       &--hide {
         opacity: 0;
+      }
+      &--showMove {
+        left: 50%;
+        @include transEffect(2s, ease);
       }
     }
     &-leftFace {
@@ -65,22 +70,23 @@
     position: absolute;
     text-decoration: none;
     top: 42%;
-    @extend %main-font;
+    @extend %main-font, %col-mid;
     font-size: 3vw;
     font-weight: 600;
     z-index: 2;
     cursor: pointer;
     transform: translate(-50%, -50%);
-    transition: 1s ease-in;
     animation-delay: 0.7s;
-    transition: 1s ease-in;
+    @include transEffect(1s, ease-in);
+    height: 70%;
+    width: 22%;
 
     &:hover {
       color: #551a8b;
     }
 
     &-right {
-      right: 10%;
+      right: -4%;
 
       &--show {
         opacity: 1;

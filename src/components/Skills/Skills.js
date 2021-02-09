@@ -4,14 +4,19 @@ import RubiOrigin from "../../assets/about/RubiOrigin.png";
 import RubiAnime from "../../assets/about/Rubi.png";
 import RightFace from "../../assets/about/RubiHalfRight.png";
 import LeftFace from "../../assets/about/RubiHalfLeft.png";
-import { Link } from "react-router-dom";
+
 import { NavHashLink } from "react-router-hash-link";
 
-const Skills = ({ children }) => {
-  const [showOrigin, setShowOrigin] = useState(false);
-  const [showAnime, setShowAnime] = useState(false);
+const Skills = ({
+  children,
+  showOrigin,
+  setShowOrigin,
+  showAnime,
+  showDevSkills,
+  setShowDevSkills,
+  setShowAnime,
+}) => {
   return (
-    // <>
     <section id="skill" className="Skills__section Skills__section-skill">
       {children}
       <div className="Skills__leftSide">
@@ -19,9 +24,10 @@ const Skills = ({ children }) => {
           className=" Skills__image Skills__image-leftFace"
           src={LeftFace}
           alt=""
+          style={showDevSkills ? { display: "none" } : null}
         />
-        <NavHashLink
-          to="/portfolio/#develop"
+        <div
+          onClick={() => setShowDevSkills(true)}
           onMouseEnter={(e) => {
             setShowOrigin(true);
           }}
@@ -34,16 +40,20 @@ const Skills = ({ children }) => {
               ? "Skills__link Skills__link-left Skills__link-left--hide"
               : "Skills__link Skills__link-left Skills__link-left--show"
           }
+          style={showDevSkills ? { display: "none" } : { display: "flex" }}
         >
           Developer
-        </NavHashLink>
+        </div>
       </div>
 
       <div className="Skills__rightSide">
-        <img className=" Skills__image-rightFace" src={RightFace} alt="" />
-        <NavHashLink
-          smooth
-          to="/portfolio/#design"
+        <img
+          style={showDevSkills ? { display: "none" } : { display: "block" }}
+          className=" Skills__image-rightFace"
+          src={RightFace}
+          alt=""
+        />
+        <div
           onMouseEnter={() => {
             setShowAnime(true);
           }}
@@ -58,10 +68,11 @@ const Skills = ({ children }) => {
           }
         >
           Designer
-        </NavHashLink>
+        </div>
       </div>
 
       <img
+        // style={showDevSkills ? { display: "none" } : { display: "block" }}
         className={
           showAnime
             ? " Skills__image Skills__image-anime Skills__image-anime--show"
@@ -79,8 +90,15 @@ const Skills = ({ children }) => {
         src={RubiOrigin}
         alt=""
       />
+      <img
+        className="Skills__image Skills__image-origin Skills__image-origin--showMove"
+        style={
+          showDevSkills ? { left: "25%" } : { left: "50%", display: "none" }
+        }
+        src={RubiOrigin}
+        alt=""
+      />
     </section>
-    // {/* </> */}
   );
 };
 
