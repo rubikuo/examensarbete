@@ -1,5 +1,5 @@
 @import "../../style/SassVariables";
-.Skills {
+.Graph {
   &__section {
     position: relative;
 
@@ -7,7 +7,7 @@
       width: 100%;
       padding-top: 56.25%;
       overflow: hidden;
-      margin: 0;
+      margin: 2% 0 0 0;
     }
   }
 
@@ -27,6 +27,10 @@
       }
       &--hide {
         opacity: 0;
+      }
+      &--showMove {
+        left: 50%;
+        @include transEffect(2s, ease);
       }
     }
     &-origin {
@@ -139,19 +143,30 @@
 }
 
 @media screen and (max-width: 900px) {
-  .About {
+  .Graph {
     &__section {
-      &-intro {
-        max-height: 420px;
+      &-skill {
+        margin-top: 8%;
       }
     }
-    &__article {
-      &-intro {
-        top: 20%;
+    &__image {
+      top: 60%;
+      width: 48%;
+      &-rightFace {
+        top: 60%;
+        width: 48%;
       }
-    }
-    &__para-intro {
-      font-size: 1.5rem;
+
+      &-anime {
+        &--showMove {
+          display: none !important;
+        }
+      }
+      &-origin {
+        &--showMove {
+          display: none !important;
+        }
+      }
     }
   }
 }

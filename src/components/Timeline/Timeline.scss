@@ -1,6 +1,7 @@
 @import "../../style/SassVariables";
 .Timeline {
   top: 40px !important;
+  margin-bottom: 15% !important;
   &__title {
     font-size: 2rem;
     @extend %content-font;

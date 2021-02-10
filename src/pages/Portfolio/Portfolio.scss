@@ -1,10 +1,10 @@
 @import "../../style/SassVariables";
 
 .Portfolio {
-  min-height: 100vh;
-  margin-top: 80px;
   &__section {
     &-develop {
+      min-height: calc(100vh - 80px);
+      margin-top: 80px;
       width: 100%;
       @extend %col-mid;
       justify-content: flex-start;
@@ -17,12 +17,16 @@
       );
       background-position: right;
     }
-    // &-design {
-    //   height: 100vh;
-    //   background-color: rgb(210, 246, 255);
-    // }
   }
 }
 
 @media screen and (max-width: 900px) {
+  .Portfolio {
+    &__section {
+      &-develop {
+        min-height: calc(100vh - 60px);
+        margin-top: 60px;
+      }
+    }
+  }
 }

@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from "react";
 import "./Resume.scss";
 import Timeline from "../../components/Timeline/Timeline";
+import Graph from "../../components/Graph/Graph";
 import { Link } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import { Helmet } from "react-helmet-async";
-import Skills from "../../components/Skills/Skills";
+import { devSkills, designSkills } from "../../utility/skills";
+import { FaArrowLeft } from "react-icons/fa";
 import AOS from "aos";
 
 const Resume = () => {
   const [showOrigin, setShowOrigin] = useState(false);
   const [showAnime, setShowAnime] = useState(false);
   const [showDevSkills, setShowDevSkills] = useState(false);
+  const [showDesignSkills, setShowDesignSkills] = useState(false);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -18,6 +21,7 @@ const Resume = () => {
   useEffect(() => {
     AOS.init();
   }, []);
+
   return (
     <>
       <Helmet>
@@ -25,29 +29,84 @@ const Resume = () => {
       </Helmet>
       <main className="Resume">
         <section id="skills" className="Resume__section Resume__section-skills">
-          <h1
+          <div
             data-aos="fade-left"
             className="Resume__title Resume__title-skills "
           >
-            Skills
-          </h1>
-          <Skills
+            {showDevSkills ? (
+              <button
+                className="Resume__btn"
+                onClick={() => setShowDevSkills(false)}
+              >
+                <FaArrowLeft />
+              </button>
+            ) : showDesignSkills ? (
+              <button
+                className="Resume__btn"
+                onClick={() => setShowDesignSkills(false)}
+              >
+                <FaArrowLeft />{" "}
+              </button>
+            ) : null}
+            <h1>
+              {showDevSkills
+                ? "Coding Skills"
+                : showDesignSkills
+                ? "Design Skills"
+                : "Skills"}
+            </h1>
+          </div>
+          <Graph
             showOrigin={showOrigin}
             setShowOrigin={setShowOrigin}
             showAnime={showAnime}
             setShowAnime={setShowAnime}
             showDevSkills={showDevSkills}
             setShowDevSkills={setShowDevSkills}
+            showDesignSkills={showDesignSkills}
+            setShowDesignSkills={setShowDesignSkills}
           />
           <div
-            className="Resume__devSkills"
-            style={showDevSkills ? { right: "0%" } : { right: "-50%" }}
+            className={
+              showDevSkills
+                ? `Resume__ctn Resume__ctn-devSkills--show`
+                : `Resume__ctn Resume__ctn-devSkills--hide`
+            }
           >
-            <p>HTML</p>
-            <p>CSS / Sass</p>
-            <p>JavaScript</p>
-
-            <button onClick={() => setShowDevSkills(false)}> >> </button>
+            {devSkills.map((each, i) => {
+              return (
+                <div key={i} className="Resume__skillCtn">
+                  <h1>{each.catagory}</h1>
+                  {each.skills.map((skill, i) => {
+                    return (
+                      <p
+                        key={skill}
+                        className={`Resume__skill-dev Resume__skill-dev--${skill}`}
+                      >
+                        {skill === "Express" ? "Express.js" : skill}
+                      </p>
+                    );
+                  })}
+                </div>
+              );
+            })}
+          </div>
+          <div
+            className={
+              showDesignSkills
+                ? `Resume__ctn Resume__ctn-designSkills Resume__ctn-designSkills--show`
+                : `Resume__ctn Resume__ctn-designSkills Resume__ctn-designSkills--hide`
+            }
+          >
+            {designSkills.map((each, i) => {
+              return (
+                <div
+                  className={`Resume__skill-design Resume__skill-design--${each}`}
+                >
+                  <h1>{each}</h1>
+                </div>
+              );
+            })}
           </div>
           <NavHashLink to="/resume/#experience" smooth>
             down
@@ -57,12 +116,12 @@ const Resume = () => {
           id="experience"
           className="Resume__section Resume__section-experience"
         >
-          <h1
+          <div
             data-aos="fade-left"
             className="Resume__title Resume__title-experience"
           >
-            Work Experience &amp; Education
-          </h1>
+            <h1>Work Experience &amp; Education</h1>
+          </div>
 
           <Timeline />
           <NavHashLink to="/resume/#hackathon" smooth>
@@ -74,12 +133,13 @@ const Resume = () => {
           id="hackathon"
           className="Resume__section Resume__section-hackathon"
         >
-          <h1
+          <div
             data-aos="fade-left"
-            className="Resume__title Resume__title-hackathon"
+            className="Resume__title
+            Resume__title-hackathon"
           >
-            Hackathon
-          </h1>
+            <h1>Hackathon</h1>
+          </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus iste
             molestiae, quae fuga, sapiente quaerat delectus veritatis autem

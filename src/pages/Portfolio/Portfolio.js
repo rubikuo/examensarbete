@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Options from "../../components/Options/Options.js";
 import "./Portfolio.scss";
 // import Slick from "../../components/Slick/Slick";

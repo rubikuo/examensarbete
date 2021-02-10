@@ -24,25 +24,150 @@
     }
   }
 
-  &__devSkills {
+  &__ctn {
     position: absolute;
     width: 50%;
     height: 70%;
     top: 12%;
     z-index: 300;
-    background-color: grey;
-    @extend %col-mid;
-    flex-grow: 1;
-    @include transEffect(3s, ease);
+    background-color: transparent;
+    @include transEffect(2s, ease);
+
+    &-designSkills {
+      @extend %row-mid;
+      flex-wrap: wrap;
+      &--show {
+        left: 0%;
+      }
+      &--hide {
+        left: -50%;
+      }
+    }
+    &-devSkills {
+      &--show {
+        right: 0%;
+      }
+      &--hide {
+        right: -50%;
+      }
+    }
   }
 
+  &__skillCtn {
+    width: 100%;
+    padding-top: 1%;
+    @extend %col-mid;
+    align-items: flex-end;
+
+    h1 {
+      font-size: 2rem;
+      margin: 2px 0;
+    }
+  }
+  &__skill {
+    &-dev {
+      border-radius: 8px 0 0 8px;
+      line-height: 2.8rem;
+      font-size: 2rem;
+      padding-left: 10px;
+      margin: 2px 0 2px 0;
+      background-color: rgba(7, 24, 100, 0.733);
+      color: white;
+      font-style: italic;
+      &--HTML {
+        width: 90%;
+      }
+      &--CSS {
+        width: 90%;
+      }
+      &--JavaScript {
+        width: 88%;
+      }
+      &--GraphQL {
+        width: 65%;
+      }
+      &--TypeScript {
+        width: 62%;
+      }
+      &--jQuery {
+        width: 60%;
+      }
+      &--React {
+        width: 88%;
+      }
+      &--Express {
+        width: 70%;
+      }
+      &--Angular {
+        width: 55%;
+      }
+      &--MongoDB {
+        width: 70%;
+      }
+      &--Firebase {
+        width: 55%;
+      }
+      &--GraphCMS {
+        width: 68%;
+      }
+    }
+    &-design {
+      width: 120px;
+      height: 120px;
+      border-radius: 20%;
+
+      @extend %row-mid;
+      margin: 0 10px;
+      color: black;
+      h1 {
+        font-size: 5em;
+      }
+
+      &--Ps {
+        background-color: rgba(0, 30, 52, 0.2);
+      }
+      &--Ai {
+        background-color: rgba(49, 0, 0, 0.2);
+      }
+      &--Xd {
+        background-color: rgba(69, 1, 53, 0.2);
+      }
+      &--Id {
+        background-color: rgba(71, 3, 30, 0.2);
+      }
+      &--UX {
+        background-color: rgba(137, 43, 226, 0.2);
+      }
+      &--UI {
+        background-color: rgba(0, 139, 139, 0.2);
+      }
+
+      &--UX,
+      &--UI {
+        border-radius: 50%;
+      }
+    }
+  }
   &__title {
-    font-size: 3vw;
-    text-align: right;
-    @extend %main-font;
-    margin: 20px 0;
+    @extend %row-between;
+    h1 {
+      font-size: 2.5rem;
+      text-align: right;
+      @extend %main-font;
+    }
+
+    margin: 2% 0;
     border-bottom: 2px solid rgb(161, 161, 161);
     padding: 0 0 4px 0;
+  }
+  &__btn {
+    width: 50px;
+    line-height: 2.5rem;
+    font-size: 2.5rem;
+    @extend %row-mid;
+    background-color: transparent;
+    border: none;
+    outline: none;
   }
 }
 
@@ -51,8 +176,26 @@
     margin-top: 60px;
     &__section {
       height: auto;
+    }
+    &__ctn {
+      width: 100%;
 
-      margin-top: 60px;
+      &-designSkills {
+        &--show {
+          left: 0%;
+        }
+        &--hide {
+          left: -100%;
+        }
+      }
+      &-devSkills {
+        &--show {
+          right: 0%;
+        }
+        &--hide {
+          right: -100%;
+        }
+      }
     }
   }
 }

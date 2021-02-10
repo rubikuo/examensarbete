@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import "./Header.scss";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../../assets/logo/rubiLogo.svg";
-import { NavHashLink } from "react-router-hash-link";
 import { HandleBgScroll } from "../../utility/functions";
 
 const Header = () => {
