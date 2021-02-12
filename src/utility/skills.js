@@ -24,6 +24,6 @@ const devSkills = [
   },
 ];
 
-const designSkills = ["Ps", "Ai", "Xd", "Id", "UX", "UI"];
+const designSkills = ["Ps", "Ai", "Xd", "Id", "UX", "UI", "RWD"];
 
 export { devSkills, designSkills };

@@ -43,13 +43,13 @@
 }
 
 %lightBtn {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(88, 88, 88);
   text-align: center;
-  color: rgb(31, 31, 31);
+  color: rgb(255, 255, 255);
 
   &:hover {
-    background-color: rgb(0, 0, 0);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
   }
 }
 

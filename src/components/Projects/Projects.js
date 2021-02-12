@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import { data } from "../../utility/projects";
 import "./Projects.scss";
-// import Options from "../Options/Options";
 import Modal from "../Modal/Modal";
 
-const Projects = ({ type, setType, classes, setClasses }) => {
-  // const [type, setType] = useState("All");
-  // const [className, setClassName] = useState("Projects__project");
+const Projects = ({ type, classes }) => {
   const [openModal, setOpenModal] = useState(null);
 
   return (
@@ -15,11 +12,6 @@ const Projects = ({ type, setType, classes, setClasses }) => {
         openModal !== null ? "Projects Projects-pointEvent" : "Projects"
       }
     >
-      {/* <Options
-        projectTypes={projectTypes}
-        controlContent={controlContent}
-        type={type}
-      /> */}
       <div className="Projects__wrapper">
         {type === "All"
           ? data.map((ea, i) => {

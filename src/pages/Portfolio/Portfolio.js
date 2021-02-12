@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Options from "../../components/Options/Options.js";
 import "./Portfolio.scss";
-// import Slick from "../../components/Slick/Slick";
+
 import { Helmet } from "react-helmet-async";
 import Projects from "../../components/Projects/Projects";
 import { projectTypes } from "../../utility/projects";
@@ -40,11 +40,8 @@ const Portfolio = () => {
             classes={classes}
             setClasses={setClasses}
           />
-          {/* <Slick /> */}
         </section>
-        <section id="design" className="Portfolio__section-design">
-          {/* <Gallery /> */}
-        </section>
+        <section id="design" className="Portfolio__section-design"></section>
       </main>
     </>
   );

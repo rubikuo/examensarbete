@@ -141,9 +141,16 @@
       &--UI {
         background-color: rgba(0, 139, 139, 0.2);
       }
+      &--RWD {
+        background-color: rgba(0, 191, 255, 0.2);
+        h1 {
+          font-size: 4rem;
+        }
+      }
 
       &--UX,
-      &--UI {
+      &--UI,
+      &--RWD {
         border-radius: 50%;
       }
     }
