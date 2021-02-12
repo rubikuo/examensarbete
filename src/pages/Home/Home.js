@@ -4,7 +4,8 @@ import "./Home.scss";
 import { Helmet } from "react-helmet-async";
 import partialPadals from "../../assets/home/partialPadals.png";
 import partialPadals2 from "../../assets/home/partialPadals2.png";
-import partialPadals3 from "../../assets/home/partialPadals.png";
+import partialPadals3 from "../../assets/home/partialPadals3.png";
+import partialPadals4 from "../../assets/home/partialpadals4.png";
 
 const Home = () => {
   const [texts, setTexts] = useState("");
@@ -76,6 +77,11 @@ const Home = () => {
         <img
           className="Home__img Home__img-padals3"
           src={partialPadals3}
+          alt=""
+        />
+        <img
+          className="Home__img Home__img-padals4"
+          src={partialPadals4}
           alt=""
         />
         <p>

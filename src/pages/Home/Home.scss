@@ -29,10 +29,11 @@
 
   &__img {
     position: absolute;
-    z-index: -100;
+    z-index: -200;
+
     &-padals {
       width: 300px;
-      animation: padals 8s infinite linear;
+      animation: padals 10s infinite linear;
     }
     &-padals2 {
       width: 300px;
@@ -42,6 +43,10 @@
     &-padals3 {
       width: 300px;
       animation: padals3 7s infinite linear;
+    }
+    &-padals4 {
+      width: 300px;
+      animation: padals4 8s infinite linear;
     }
   }
 
@@ -53,27 +58,27 @@
       opacity: 1;
     }
     20% {
-      top: 90px;
-      left: 100px;
-      transform: rotate(-30deg);
+      top: 80px;
+      left: 110px;
+      transform: rotate(-20deg);
     }
     40% {
-      top: 135px;
-      left: 300px;
-      transform: rotate(-50deg);
+      top: 145px;
+      left: 290px;
     }
     60% {
-      top: 225px;
-      left: 500px;
+      top: 215px;
+      left: 480px;
+      transform: rotate(-30deg);
       opacity: 1;
     }
     80% {
-      top: 330px;
-      left: 800px;
+      top: 310px;
+      left: 790px;
     }
     100% {
       bottom: 0px;
-      left: 900px;
+      left: 910px;
       opacity: 0;
     }
   }
@@ -140,6 +145,39 @@
     100% {
       bottom: 0px;
       left: 650px;
+      opacity: 0;
+    }
+  }
+
+  @keyframes padals4 {
+    0% {
+      top: 15px;
+      left: 15px;
+      transform: rotate(-10deg);
+      opacity: 1;
+    }
+    20% {
+      top: 80px;
+      left: 100px;
+      transform: rotate(-20deg);
+    }
+    40% {
+      top: 175px;
+      left: 320px;
+      transform: rotate(-50deg);
+    }
+    60% {
+      top: 225px;
+      left: 500px;
+      opacity: 1;
+    }
+    80% {
+      top: 330px;
+      left: 800px;
+    }
+    100% {
+      bottom: 0px;
+      left: 900px;
       opacity: 0;
     }
   }
