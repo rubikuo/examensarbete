@@ -5,7 +5,7 @@ import { MdClose, MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { HandleBgScroll } from "../../utility/functions";
 import screen from "../../assets/portfolio/Screen.png";
-import trello from "../../assets/portfolio/trello.png";
+// import trello from "../../assets/portfolio/Trello.png";
 
 const Modal = ({ open, onClose, project }) => {
   HandleBgScroll(open);
@@ -40,7 +40,7 @@ const Modal = ({ open, onClose, project }) => {
             <img className="Modal__img-screen" src={screen} alt="" />
             <img
               className="Modal__img Modal__img-project"
-              src={trello}
+              src={project.imgSrc}
               alt=""
             />
           </div>

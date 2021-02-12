@@ -11,7 +11,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgb(245, 238, 242);
-  padding: 20px 30px;
+  padding: 20px;
   z-index: 1000;
 
   @extend %radius;
@@ -47,11 +47,6 @@
     font-size: 1.5rem;
     width: 100%;
     margin: 10px;
-
-    // &:active,
-    // &:focus {
-    //   color: grey;
-    // }
   }
   &__icon {
     font-size: 1.7em;
@@ -69,23 +64,23 @@
     &-screen {
       z-index: 1;
       position: absolute;
-      width: 100%;
+      width: 90%;
       top: -10%;
-      left: 50%;
+      left: 48%;
       transform: translateX(-50%) scale(1);
     }
     &-project {
       position: absolute;
-      width: 100%;
-      top: 0%;
-      left: 50%;
+      width: 90%;
+      top: 1%;
+      left: 48%;
       transform: translateX(-50%) scale(0.9);
-      height: 255px;
+      height: 225px;
       z-index: 0;
     }
   }
   &__section {
-    width: 50%;
+    width: 49%;
     &-left {
       padding: 20px;
       height: 100%;
@@ -168,11 +163,11 @@
 
     &__img {
       &-screen {
-        width: 330px;
+        width: 320px;
       }
       &-project {
-        width: 330px;
-        height: 62%;
+        width: 320px;
+        height: 59%;
       }
     }
   }

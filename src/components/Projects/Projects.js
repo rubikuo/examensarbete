@@ -40,7 +40,7 @@ const Projects = ({ type, classes }) => {
                       Learn More
                     </button>
                   </div>
-                  <img src={ea.imgSrc} alt="logo" />
+                  <img src={ea.logoSrc} alt="logo" />
                 </div>
               );
             })
@@ -72,7 +72,7 @@ const Projects = ({ type, classes }) => {
                         Learn More
                       </button>
                     </div>
-                    <img src={ea.imgSrc} alt="logo" />
+                    <img src={ea.logoSrc} alt="logo" />
                   </div>
                 );
               })}

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import { Helmet } from "react-helmet-async";
 import { devSkills, designSkills } from "../../utility/skills";
-import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowLeft, FaChevronCircleDown } from "react-icons/fa";
 import AOS from "aos";
 
 const Resume = () => {
@@ -35,17 +35,17 @@ const Resume = () => {
           >
             {showDevSkills ? (
               <button
-                className="Resume__btn"
+                className="Resume__btn Resume__btn-arrowLeft"
                 onClick={() => setShowDevSkills(false)}
               >
                 <FaArrowLeft />
               </button>
             ) : showDesignSkills ? (
               <button
-                className="Resume__btn"
+                className="Resume__btn Resume__btn-arrowLeft"
                 onClick={() => setShowDesignSkills(false)}
               >
-                <FaArrowLeft />{" "}
+                <FaArrowLeft />
               </button>
             ) : null}
             <h1>
@@ -101,6 +101,7 @@ const Resume = () => {
             {designSkills.map((each, i) => {
               return (
                 <div
+                  key={each}
                   className={`Resume__skill-design Resume__skill-design--${each}`}
                 >
                   <h1>{each}</h1>
@@ -108,8 +109,13 @@ const Resume = () => {
               );
             })}
           </div>
-          <NavHashLink to="/resume/#experience" smooth>
-            down
+          <NavHashLink
+            data-aos="fade-up"
+            className="Resume__btn Resume__btn-arrowDown"
+            to="/resume/#experience"
+            smooth
+          >
+            <FaChevronCircleDown />
           </NavHashLink>
         </section>
         <section
@@ -124,8 +130,13 @@ const Resume = () => {
           </div>
 
           <Timeline />
-          <NavHashLink to="/resume/#hackathon" smooth>
-            down
+          <NavHashLink
+            data-aos="fade-up"
+            className="Resume__btn Resume__btn-arrowDown"
+            to="/resume/#hackathon"
+            smooth
+          >
+            <FaChevronCircleDown />
           </NavHashLink>
         </section>
 
@@ -140,7 +151,7 @@ const Resume = () => {
           >
             <h1>Hackathon</h1>
           </div>
-          <p>
+          <p data-aos="fade-up">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus iste
             molestiae, quae fuga, sapiente quaerat delectus veritatis autem
             aspernatur iure quo? Dolorum, accusantium. Quia maxime rerum vero

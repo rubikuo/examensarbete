@@ -1,7 +1,7 @@
 @import "../../style/SassVariables";
 .Timeline {
   top: 40px !important;
-  margin-bottom: 15% !important;
+  margin-bottom: 5% !important;
   &__title {
     font-size: 2rem;
     @extend %content-font;
@@ -24,5 +24,11 @@
     font-weight: 700 !important;
     letter-spacing: 1px;
     @extend %content-font;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .Timeline {
+    margin-bottom: 35% !important;
   }
 }

@@ -71,7 +71,7 @@
     }
     &--MyTrello {
       @include bgImg(
-        "../assets/portfolio/myTrello.png",
+        "../assets/portfolio/myTrelloBg.png",
         scroll,
         cover,
         rgba(17, 105, 177, 0.637),
@@ -100,7 +100,7 @@
     }
     &--HBGWifiFinder {
       @include bgImg(
-        "../assets/portfolio/HBG.png",
+        "../assets/portfolio/HBG_Bg.png",
         scroll,
         cover,
         rgba(167, 167, 167, 0.904),

@@ -2,10 +2,10 @@
 .Graph {
   &__section {
     position: relative;
+    height: 85vh;
 
     &-skill {
       width: 100%;
-      padding-top: 56.25%;
       overflow: hidden;
       margin: 2% 0 0 0;
     }
@@ -13,7 +13,7 @@
 
   &__image {
     position: absolute;
-    top: 48%;
+    top: 50%;
     left: 50%;
     width: 45%;
 
@@ -57,7 +57,7 @@
     &-rightFace {
       width: 45%;
       position: absolute;
-      top: 48%;
+      top: 50%;
       right: 50.05%;
       animation: rightFace 1s ease-in;
       transform: translate(50%, -50%);
@@ -144,19 +144,7 @@
 
 @media screen and (max-width: 900px) {
   .Graph {
-    &__section {
-      &-skill {
-        margin-top: 8%;
-      }
-    }
     &__image {
-      top: 60%;
-      width: 48%;
-      &-rightFace {
-        top: 60%;
-        width: 48%;
-      }
-
       &-anime {
         &--showMove {
           display: none !important;
@@ -166,6 +154,19 @@
         &--showMove {
           display: none !important;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Graph {
+    &__image {
+      top: 50%;
+      width: 48%;
+      &-rightFace {
+        top: 50%;
+        width: 48%;
       }
     }
   }

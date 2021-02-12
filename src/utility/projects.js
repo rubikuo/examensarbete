@@ -1,10 +1,17 @@
 import myTrelloLogo from "../assets/portfolio/myTrelloLogo.png";
+import myTrello from "../assets/portfolio/myTrello.png";
 import CloudyBoxLogo from "../assets/portfolio/CloudyBoxLogo.png";
+import CloudyBox from "../assets/portfolio/CloudyBox.png";
 import iQuizLogo from "../assets/portfolio/iQuizLogoBlue.png";
+import iQuiz from "../assets/portfolio/iQuiz.png";
+import HBG from "../assets/portfolio/HBG.png";
 import HBGLogo from "../assets/portfolio/HBGLogo-grey.png";
 import TicTacToeLogo from "../assets/portfolio/TicTacToeLogo.png";
+import TicTacToe from "../assets/portfolio/TicTacToe.png";
 import MdSimpleLogo from "../assets/portfolio/MdSimpleLogo.png";
+import MdSimple from "../assets/portfolio/MdSimple.png";
 import PrimeSwedenLogo from "../assets/portfolio/PrimeSwedenLogo.png";
+import PrimeSweden from "../assets/portfolio/PrimeSweden.png";
 
 const data = [
   {
@@ -15,7 +22,8 @@ const data = [
       "ReactJS, Node.js, Mongoose, SASS, BEM, UX design, photoshop, illustrator, RWD",
     hashtag: ["ReactJS", "Node.js", "Mongoose", "SASS", "BEM", "UX design"],
     url: "//mytrellos.herokuapp.com",
-    imgSrc: `${myTrelloLogo}`,
+    logoSrc: `${myTrelloLogo}`,
+    imgSrc: `${myTrello}`,
     details:
       "A mimic app of Trello website. It is my first full stack MERN project and the entire UI and UX design is developed in scss. The graphic images are genuine work created by Adobe Photoshop and Illustrator.",
     gitHubUrl: "//github.com/rubikuo/MyTrello",
@@ -27,7 +35,8 @@ const data = [
     technics: "ReactJS, UX design, DropBox API, Oauth, RWD",
     hashtag: ["ReactJS", "UX design", "DropBox API", "Oauth"],
     url: "//cloudybox.surge.sh/",
-    imgSrc: `${CloudyBoxLogo}`,
+    logoSrc: `${CloudyBoxLogo}`,
+    imgSrc: `${CloudyBox}`,
     details:
       "A React app using DropBox API, implemented with Oauth authorization framework.",
     gitHubUrl: "//github.com/rubikuo/CloudyBox",
@@ -40,7 +49,8 @@ const data = [
     technics: "ReactJS, Open Triva DB API, WAI-ARIA, SVG graphic design, RWD",
     hashtag: ["ReactJS", "UX design", "DropBox API", "Oauth"],
     url: "//rubis-iquiz.surge.sh/",
-    imgSrc: `${iQuizLogo}`,
+    logoSrc: `${iQuizLogo}`,
+    imgSrc: `${iQuiz}`,
     details:
       "A React app using Open Triva DB API. The development is mainly focus on UX design and ARIA tags for increasing web accessibility.",
     gitHubUrl: "//github.com/rubikuo/iQuiz",
@@ -59,7 +69,8 @@ const data = [
       "BootStrap",
     ],
     url: "//hbg-wifi-finder.surge.sh/#/",
-    imgSrc: `${HBGLogo}`,
+    logoSrc: `${HBGLogo}`,
+    imgSrc: `${HBG}`,
     details:
       "An Angular app using Helsingborg city open API to improve the social integration for the locals and the visitors in Helsingborg. Using Firebase to handle login authentication and Mapbox GL showing the wifi's geolocation",
     gitHubUrl: "//github.com/rubikuo/HBG-WifiFinder",
@@ -78,7 +89,8 @@ const data = [
       "Material Design",
     ],
     url: "//rubis-mdsimple.surge.sh/",
-    imgSrc: `${MdSimpleLogo}`,
+    logoSrc: `${MdSimpleLogo}`,
+    imgSrc: `${MdSimple}`,
     details:
       "An React app focused on UX design by using SASS to mockup functions, styles, and measurement of TextField, Switch, Checkbox, RadioButto from Material Design.",
     gitHubUrl: "//github.com/rubikuo/MdSimple",
@@ -90,7 +102,8 @@ const data = [
     technics: "HTML, CSS Animation, JavaScript",
     hashtag: ["HTML", "CSS Animation", "JavaScript"],
     url: "//rubis-tictactoe.surge.sh/",
-    imgSrc: `${TicTacToeLogo}`,
+    logoSrc: `${TicTacToeLogo}`,
+    imgSrc: `${TicTacToe}`,
     details:
       "A tic tac toc game developed by pure JavaScript. Css animation is implemented for creating the dynamic visual effect in the background.",
     gitHubUrl: "//github.com/rubikuo/Tic-Tac-Toe",
@@ -102,7 +115,8 @@ const data = [
     technics: "HTML, CSS, jQuery, Bootstrap, RWD",
     hashtag: ["HTML", "CSS", "jQuery", "Bootstrap"],
     url: "//prime-sweden.surge.sh/",
-    imgSrc: `${PrimeSwedenLogo}`,
+    logoSrc: `${PrimeSwedenLogo}`,
+    imgSrc: `${PrimeSweden}`,
     details:
       "A fashion E-commerce mockup website to mimic product presenting, price sorting, shopping cart handling. Web responsive is implemented.",
     gitHubUrl: "//github.com/rubikuo/Prime-Sweden",

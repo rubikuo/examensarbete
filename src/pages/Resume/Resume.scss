@@ -3,6 +3,9 @@
 .Resume {
   min-height: calc(100vh - 80px);
   margin-top: 80px;
+  width: 100%;
+
+  text-align: center;
   @include bgImg(
     "../assets/about/Lantern.png",
     fixed,
@@ -18,7 +21,9 @@
     position: relative;
     padding-top: 5px;
     overflow: hidden;
-
+    // &-skills {
+    //   height: 90vh;
+    // }
     &-experience {
       padding-bottom: 20px;
     }
@@ -168,21 +173,38 @@
     padding: 0 0 4px 0;
   }
   &__btn {
-    width: 50px;
-    line-height: 2.5rem;
-    font-size: 2.5rem;
-    @extend %row-mid;
     background-color: transparent;
     border: none;
     outline: none;
+
+    line-height: 2.5rem;
+    font-size: 2.5rem;
+    width: 50px;
+    &-arrowLeft {
+      @extend %row-mid;
+      color: rgb(82, 82, 82);
+    }
+    &-arrowDown {
+      color: rgb(151, 151, 151);
+      margin: 14% auto;
+      display: inline-block;
+      font-size: 3.3rem;
+    }
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
 @media screen and (max-width: 900px) {
   .Resume {
+    min-height: calc(100vh - 60px);
     margin-top: 60px;
     &__section {
       height: auto;
+      &-skills {
+        height: 70vh;
+      }
     }
     &__ctn {
       width: 100%;
@@ -202,6 +224,11 @@
         &--hide {
           right: -100%;
         }
+      }
+    }
+    &__btn {
+      &-arrowDown {
+        display: none;
       }
     }
   }
