@@ -13,6 +13,7 @@ import {
   FaInstagram,
   FaLinkedin,
   FaEnvelope,
+  FaDownload,
 } from "react-icons/fa";
 import AOS from "aos";
 
@@ -174,7 +175,7 @@ const Resume = () => {
               className="Resume__article Resume__article-hack"
             >
               <img
-                className="Resume__image Resume__image-Dapp"
+                className="Resume__image Resume__image-dapp"
                 src="https://i.ibb.co/GfmNCXJ/DAPP-Logo.png"
                 alt="DAPP Logo"
               />
@@ -221,6 +222,7 @@ const Resume = () => {
           >
             <h1>Contact</h1>
           </div>
+
           <div className="Resume__wrapper Resume__wrapper-contactLinks ">
             <Link
               data-aos="fade-up"
@@ -259,9 +261,22 @@ const Resume = () => {
               <FaEnvelope />
             </Link>
           </div>
-          <Link to="JuIKuo-CV.pdf" target="_blank" download>
-            Download Resume
+
+          <Link
+            data-aos="zoom-in"
+            className="Resume__btn  Resume__btn-download"
+            to="JuIKuo-CV.pdf"
+            target="_blank"
+            download
+          >
+            <FaDownload /> Resume
           </Link>
+          <h2
+            data-aos="fade-up"
+            className="Resume__subtitle Resume__subtitle-contact"
+          >
+            Looking forward to hearing from you!{" "}
+          </h2>
           <NavHashLink
             data-aos="fade-up"
             className="Resume__btn Resume__btn-arrowTop"

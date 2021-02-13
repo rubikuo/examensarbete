@@ -28,6 +28,9 @@
     &-hackathon {
       padding-bottom: 20px;
     }
+    &-contact {
+      min-height: 90vh;
+    }
   }
 
   &__ctn {
@@ -179,6 +182,10 @@
   &__subtitle {
     @extend %content-font;
     font-size: 2.3rem;
+    &-contact {
+      margin-top: 8%;
+      font-size: 1.8rem;
+    }
   }
 
   &__wrapper {
@@ -191,11 +198,11 @@
     }
   }
   &__links {
-    font-size: 5rem;
-    margin: 2%;
-    color: rgb(98, 70, 129);
+    font-size: 4.5rem;
+    margin: 4% 2% 0 2%;
+    color: rgb(58, 29, 126);
     &:hover {
-      color: rgb(75, 30, 143);
+      color: rgb(28, 28, 29);
     }
   }
 
@@ -232,9 +239,12 @@
   }
 
   &__image {
-    width: 30%;
-    min-width: 200px;
+    width: 20%;
+
     margin-bottom: 5%;
+    &-dapp {
+      min-width: 150px;
+    }
   }
   &__article {
     &-hack {
@@ -278,7 +288,22 @@
       font-weight: 700;
       color: white;
       border-radius: 50%;
-      margin: 10% auto;
+      margin: 8% auto;
+    }
+    &-download {
+      width: auto;
+      display: inline-block;
+      color: white;
+      line-height: 1.8rem;
+      font-size: 1.8rem;
+      padding: 10px;
+      border-radius: 3px;
+      margin-top: 5%;
+      @extend %row-mid;
+      background-color: rgb(73, 73, 73);
+      &:hover {
+        background-color: rgb(24, 24, 24);
+      }
     }
     &:hover {
       cursor: pointer;
@@ -295,8 +320,14 @@
       &-skills {
         height: 70vh;
       }
+      &-experience {
+        padding-bottom: 0;
+      }
       &-hackathon {
         padding: 0px 0 100px 0;
+      }
+      &-contact {
+        min-height: 50vh;
       }
     }
     &__image {
@@ -323,12 +354,23 @@
         }
       }
     }
+    &__wrapper {
+      &-contactLinks {
+        margin-top: 10%;
+      }
+    }
 
     &__article {
       &-hack {
         width: 90%;
         min-width: 400px;
         padding: 5%;
+      }
+    }
+    &__subtitle {
+      &-contact {
+        margin-top: 15%;
+        font-size: 1.8rem;
       }
     }
 
