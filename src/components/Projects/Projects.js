@@ -18,7 +18,11 @@ const Projects = ({ type, classes }) => {
               return (
                 <div
                   key={ea.id}
-                  className={`${classes} Projects__project--${ea.project}`}
+                  className={
+                    ea.project === "HBG WifiFinder"
+                      ? `${classes} Projects__project--WifiFinder`
+                      : `${classes} Projects__project--${ea.project}`
+                  }
                 >
                   <div className="Projects__project-overlay">
                     <p style={{ fontSize: "2.2rem" }}>{ea.type}</p>
@@ -50,7 +54,11 @@ const Projects = ({ type, classes }) => {
                 return (
                   <div
                     key={ea.id}
-                    className={`${classes} Projects__project--${ea.project}`}
+                    className={
+                      ea.project === "HBG WifiFinder"
+                        ? `${classes} Projects__project--WifiFinder`
+                        : `${classes} Projects__project--${ea.project}`
+                    }
                   >
                     <div className="Projects__project-overlay">
                       <p style={{ fontSize: "2.2rem" }}>{ea.type}</p>

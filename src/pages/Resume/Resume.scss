@@ -21,10 +21,11 @@
     position: relative;
     padding-top: 5px;
     overflow: hidden;
-    // &-skills {
-    //   height: 90vh;
-    // }
+
     &-experience {
+      padding-bottom: 20px;
+    }
+    &-hackathon {
       padding-bottom: 20px;
     }
   }
@@ -39,6 +40,7 @@
     @include transEffect(2s, ease);
 
     &-designSkills {
+      height: 40%;
       @extend %row-mid;
       flex-wrap: wrap;
       &--show {
@@ -72,13 +74,14 @@
   &__skill {
     &-dev {
       border-radius: 8px 0 0 8px;
-      line-height: 2.8rem;
-      font-size: 2rem;
+      line-height: 2.5rem;
+      font-size: 1.6rem;
       padding-left: 10px;
       margin: 2px 0 2px 0;
       background-color: rgba(7, 24, 100, 0.733);
       color: white;
       font-style: italic;
+
       &--HTML {
         width: 90%;
       }
@@ -113,32 +116,32 @@
         width: 55%;
       }
       &--GraphCMS {
-        width: 68%;
+        width: 67%;
       }
     }
     &-design {
-      width: 120px;
-      height: 120px;
+      width: 11rem;
+      height: 11rem;
       border-radius: 20%;
 
       @extend %row-mid;
-      margin: 0 10px;
+      margin: 10px;
       color: black;
       h1 {
-        font-size: 5em;
+        font-size: 4em;
       }
 
       &--Ps {
-        background-color: rgba(0, 30, 52, 0.2);
+        background-color: rgba(16, 57, 145, 0.2);
       }
       &--Ai {
-        background-color: rgba(49, 0, 0, 0.2);
+        background-color: rgba(206, 90, 61, 0.2);
       }
       &--Xd {
-        background-color: rgba(69, 1, 53, 0.2);
+        background-color: rgba(211, 33, 235, 0.2);
       }
       &--Id {
-        background-color: rgba(71, 3, 30, 0.2);
+        background-color: rgba(148, 9, 64, 0.2);
       }
       &--UX {
         background-color: rgba(137, 43, 226, 0.2);
@@ -149,7 +152,7 @@
       &--RWD {
         background-color: rgba(0, 191, 255, 0.2);
         h1 {
-          font-size: 4rem;
+          font-size: 3.5rem;
         }
       }
 
@@ -163,7 +166,7 @@
   &__title {
     @extend %row-between;
     h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       text-align: right;
       @extend %main-font;
     }
@@ -171,6 +174,82 @@
     margin: 2% 0;
     border-bottom: 2px solid rgb(161, 161, 161);
     padding: 0 0 4px 0;
+  }
+
+  &__subtitle {
+    @extend %content-font;
+    font-size: 2.3rem;
+  }
+
+  &__wrapper {
+    @extend %row-mid;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    padding: 0;
+    &-contactLinks {
+      justify-content: center;
+    }
+  }
+  &__links {
+    font-size: 5rem;
+    margin: 2%;
+    color: rgb(98, 70, 129);
+    &:hover {
+      color: rgb(75, 30, 143);
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    background-color: white;
+    margin: 15px;
+    align-items: center;
+    padding: 25px 0;
+    box-shadow: 2px 2px 3px 0px #757575;
+    img {
+      width: 300px;
+      height: 250px;
+      object-fit: cover;
+      box-shadow: 0px 0px 2px 0px rgba(80, 80, 80, 0.795);
+    }
+  }
+
+  &__cardBody {
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    @extend %main-font;
+    font-weight: 700;
+    p {
+      margin-top: 10px;
+    }
+    span {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__image {
+    width: 30%;
+    min-width: 200px;
+    margin-bottom: 5%;
+  }
+  &__article {
+    &-hack {
+      width: 45%;
+      min-width: 400px;
+      padding: 2%;
+    }
+  }
+
+  &__para {
+    line-height: 2.7rem;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    text-align: left;
+    @extend %content-font;
   }
   &__btn {
     background-color: transparent;
@@ -190,6 +269,17 @@
       display: inline-block;
       font-size: 3.3rem;
     }
+    &-arrowTop {
+      background-color: rgb(151, 151, 151);
+      width: 3.3rem;
+      height: 3.3rem;
+      @extend %row-mid;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: white;
+      border-radius: 50%;
+      margin: 10% auto;
+    }
     &:hover {
       cursor: pointer;
     }
@@ -205,6 +295,12 @@
       &-skills {
         height: 70vh;
       }
+      &-hackathon {
+        padding: 0px 0 100px 0;
+      }
+    }
+    &__image {
+      margin: 10% auto;
     }
     &__ctn {
       width: 100%;
@@ -212,6 +308,7 @@
       &-designSkills {
         &--show {
           left: 0%;
+          height: 60%;
         }
         &--hide {
           left: -100%;
@@ -226,6 +323,15 @@
         }
       }
     }
+
+    &__article {
+      &-hack {
+        width: 90%;
+        min-width: 400px;
+        padding: 5%;
+      }
+    }
+
     &__btn {
       &-arrowDown {
         display: none;

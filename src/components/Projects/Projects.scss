@@ -98,9 +98,9 @@
         rgba(223, 239, 240, 0.247)
       );
     }
-    &--HBGWifiFinder {
+    &--WifiFinder {
       @include bgImg(
-        "../assets/portfolio/HBG_Bg.png",
+        "../assets/portfolio/HBG_BG.png",
         scroll,
         cover,
         rgba(167, 167, 167, 0.904),

@@ -6,7 +6,14 @@ import { Link } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import { Helmet } from "react-helmet-async";
 import { devSkills, designSkills } from "../../utility/skills";
-import { FaArrowLeft, FaChevronCircleDown } from "react-icons/fa";
+import {
+  FaArrowLeft,
+  FaChevronCircleDown,
+  FaGithubSquare,
+  FaInstagram,
+  FaLinkedin,
+  FaEnvelope,
+} from "react-icons/fa";
 import AOS from "aos";
 
 const Resume = () => {
@@ -151,17 +158,119 @@ const Resume = () => {
           >
             <h1>Hackathon</h1>
           </div>
-          <p data-aos="fade-up">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus iste
-            molestiae, quae fuga, sapiente quaerat delectus veritatis autem
-            aspernatur iure quo? Dolorum, accusantium. Quia maxime rerum vero
-            quidem nam vitae.
-          </p>
+          <div className="Resume__wrapper">
+            <div data-aos="fade-up" className="Resume__card">
+              <img
+                src="https://i.ibb.co/ZVPj3HQ/Last-Mile-Hack-Dapp-Prize.jpg"
+                alt="last mile hack prize"
+              />
+              <div className="Resume__cardBody">
+                <p>Last Mile Hack 2019</p>
+                <span>@Helsingborg, Sweden</span>
+              </div>
+            </div>
+            <article
+              data-aos="fade-left"
+              className="Resume__article Resume__article-hack"
+            >
+              <img
+                className="Resume__image Resume__image-Dapp"
+                src="https://i.ibb.co/GfmNCXJ/DAPP-Logo.png"
+                alt="DAPP Logo"
+              />
+              <p className="Resume__para">
+                <strong>
+                  <Link target="_blank" to="https://www.lastmilehack.com/">
+                    Last Mile Hack
+                  </Link>
+                </strong>{" "}
+                was my debut Hackathon event. My team pitched an idea with an
+                app called <q>Dapp</q>
+                .
+                <br />
+                <br />
+                The purpose of the app is to provide not only a transparent
+                delivery and returning process, but also a better communication
+                platform between brands and customers. UX was the main
+                technology our team used to present the ideas, and honorably we
+                won a prize.
+                <br />
+                <br />
+                It was a special and inspiring experience for me. I am looking
+                forward to participating in the next Hackathon event.
+              </p>
+            </article>
+          </div>
+          <NavHashLink
+            data-aos="fade-up"
+            className="Resume__btn Resume__btn-arrowDown"
+            to="/resume/#contact"
+            smooth
+          >
+            <FaChevronCircleDown />
+          </NavHashLink>
         </section>
-
-        <Link to="JuIKuo-CV.pdf" target="_blank" download>
-          Download
-        </Link>
+        <section
+          id="contact"
+          className="Resume__section Resume__section-contact"
+        >
+          <div
+            data-aos="fade-left"
+            className="Resume__title
+            Resume__title-contact"
+          >
+            <h1>Contact</h1>
+          </div>
+          <div className="Resume__wrapper Resume__wrapper-contactLinks ">
+            <Link
+              data-aos="fade-up"
+              data-aos-duration="200"
+              to={{ pathname: "https://github.com/rubikuo" }}
+              target="_blank"
+              className="Resume__links"
+            >
+              <FaGithubSquare />
+            </Link>
+            <Link
+              data-aos="fade-up"
+              data-aos-duration="300"
+              to={{ pathname: "https://www.linkedin.com/in/rubikuo" }}
+              target="_blank"
+              className="Resume__links"
+            >
+              <FaLinkedin />
+            </Link>
+            <Link
+              data-aos="fade-up"
+              data-aos-duration="400"
+              to={{ pathname: "https://www.instagram.com/voyagederubi/" }}
+              target="_blank"
+              className="Resume__links"
+            >
+              <FaInstagram />
+            </Link>
+            <Link
+              data-aos="fade-up"
+              data-aos-duration="500"
+              to={{ pathname: "mailto:rubitiara@gmail.com" }}
+              target="_blank"
+              className="Resume__links"
+            >
+              <FaEnvelope />
+            </Link>
+          </div>
+          <Link to="JuIKuo-CV.pdf" target="_blank" download>
+            Download Resume
+          </Link>
+          <NavHashLink
+            data-aos="fade-up"
+            className="Resume__btn Resume__btn-arrowTop"
+            to="/resume/#skills"
+            smooth
+          >
+            TOP
+          </NavHashLink>
+        </section>
       </main>
     </>
   );

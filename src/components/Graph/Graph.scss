@@ -158,16 +158,3 @@
     }
   }
 }
-
-@media screen and (max-width: 500px) {
-  .Graph {
-    &__image {
-      top: 50%;
-      width: 48%;
-      &-rightFace {
-        top: 50%;
-        width: 48%;
-      }
-    }
-  }
-}

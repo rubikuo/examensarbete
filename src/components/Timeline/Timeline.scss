@@ -8,22 +8,23 @@
   }
 
   &__subtitle {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     @extend %content-font;
+    letter-spacing: 1px;
   }
   &__date {
     font-size: 1.4rem !important;
     @extend %main-font;
+    text-align: left;
     font-weight: 700 !important;
     float: right !important;
     color: black;
     margin-right: 10px;
   }
   &__para {
-    font-size: 1.5rem !important;
-    font-weight: 700 !important;
+    font-size: 1.6rem !important;
     letter-spacing: 1px;
-    @extend %content-font;
+    @extend %body-font;
   }
 }
 

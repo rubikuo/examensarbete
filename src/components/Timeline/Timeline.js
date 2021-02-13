@@ -32,9 +32,10 @@ const Timeline = () => {
           HBG Works, Helsingborg
         </h4>
         <p className="Timeline__para">
-          Developing a prototype app to provide a reusing and exchanging
-          platform for used facilities in the Helsingborg Stad. The app is built
-          with React TypeScript, AWS, GraphQL, and Scrum methodology.
+          Internship. Developing a prototype app to provide a reusing and
+          exchanging platform for used facilities in the Helsingborg Stad. The
+          app is built with React TypeScript, AWS, GraphQL, and Scrum
+          methodology.
         </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
@@ -123,7 +124,7 @@ const Timeline = () => {
         icon={<FaGraduationCap />}
       >
         <h1 className="vertical-timeline-element-title Timeline__title">
-          B.A. Radio, Television and Film
+          B.A. Radio, Television &amp; Film
         </h1>
         <h4 className="vertical-timeline-element-subtitle Timeline__subtitle">
           Shih Hsin Univerisity, Taiwan
