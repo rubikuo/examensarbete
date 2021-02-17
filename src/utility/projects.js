@@ -1,17 +1,3 @@
-// import myTrelloLogo from "../assets/portfolio/myTrelloLogo.png";
-// import myTrello from "../assets/portfolio/myTrello.png";
-// import CloudyBoxLogo from "../assets/portfolio/CloudyBoxLogo.png";
-// import CloudyBox from "../assets/portfolio/CloudyBox.png";
-// import iQuizLogo from "../assets/portfolio/iQuizLogoBlue.png";
-// import iQuiz from "../assets/portfolio/iQuiz.png";
-// import HBG from "../assets/portfolio/HBG.png";
-// import HBGLogo from "../assets/portfolio/HBGLogo-grey.png";
-// import TicTacToeLogo from "../assets/portfolio/TicTacToeLogo.png";
-// import TicTacToe from "../assets/portfolio/TicTacToe.png";
-// import MdSimpleLogo from "../assets/portfolio/MdSimpleLogo.png";
-// import MdSimple from "../assets/portfolio/MdSimple.png";
-// import PrimeSwedenLogo from "../assets/portfolio/PrimeSwedenLogo.png";
-// import PrimeSweden from "../assets/portfolio/PrimeSweden.png";
 import myTrelloLogo from "../assets/portfolio/myTrelloLogo.jpg";
 import myTrello from "../assets/portfolio/myTrello.jpg";
 import CloudyBoxLogo from "../assets/portfolio/CloudyBoxLogo.jpg";

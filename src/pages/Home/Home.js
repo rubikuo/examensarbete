@@ -2,10 +2,10 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Home.scss";
 import { Helmet } from "react-helmet-async";
-import partialPadals from "../../assets/home/partialPadals.png";
-import partialPadals2 from "../../assets/home/partialPadals2.png";
-import partialPadals3 from "../../assets/home/partialPadals3.png";
-import partialPadals4 from "../../assets/home/partialpadals4.png";
+import partialPadals from "../../assets/home/partialPadals.jpg";
+import partialPadals2 from "../../assets/home/partialPadals2.jpg";
+import partialPadals3 from "../../assets/home/partialPadals3.jpg";
+import partialPadals4 from "../../assets/home/partialpadals4.jpg";
 
 const Home = () => {
   const [texts, setTexts] = useState("");

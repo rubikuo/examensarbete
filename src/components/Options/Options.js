@@ -1,6 +1,6 @@
 import React from "react";
 import "./Options.scss";
-import flower from "../../assets/portfolio/Blossom.png";
+import flower from "../../assets/portfolio/Blossom.jpg";
 
 const Options = ({ projectTypes, controlContent, type }) => {
   return (
