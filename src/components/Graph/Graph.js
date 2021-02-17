@@ -1,8 +1,12 @@
 import "./Graph.scss";
-import RubiOrigin from "../../assets/about/RubiOrigin.png";
-import RubiAnime from "../../assets/about/Rubi.png";
-import RightFace from "../../assets/about/RubiHalfRight.png";
-import LeftFace from "../../assets/about/RubiHalfLeft.png";
+// import RubiOrigin from "../../assets/about/RubiOrigin.png";
+// import RubiAnime from "../../assets/about/Rubi.png";
+// import RightFace from "../../assets/about/RubiHalfRight.png";
+// import LeftFace from "../../assets/about/RubiHalfLeft.png";
+import RubiOrigin from "../../assets/about/RubiOrigin.jpg";
+import RubiAnime from "../../assets/about/Rubi.jpg";
+import RightFace from "../../assets/about/RubiHalfRight.jpg";
+import LeftFace from "../../assets/about/RubiHalfLeft.jpg";
 
 const Graph = ({
   children,

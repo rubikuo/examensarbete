@@ -1,17 +1,31 @@
-import myTrelloLogo from "../assets/portfolio/myTrelloLogo.png";
-import myTrello from "../assets/portfolio/myTrello.png";
-import CloudyBoxLogo from "../assets/portfolio/CloudyBoxLogo.png";
-import CloudyBox from "../assets/portfolio/CloudyBox.png";
-import iQuizLogo from "../assets/portfolio/iQuizLogoBlue.png";
-import iQuiz from "../assets/portfolio/iQuiz.png";
-import HBG from "../assets/portfolio/HBG.png";
-import HBGLogo from "../assets/portfolio/HBGLogo-grey.png";
-import TicTacToeLogo from "../assets/portfolio/TicTacToeLogo.png";
-import TicTacToe from "../assets/portfolio/TicTacToe.png";
-import MdSimpleLogo from "../assets/portfolio/MdSimpleLogo.png";
-import MdSimple from "../assets/portfolio/MdSimple.png";
-import PrimeSwedenLogo from "../assets/portfolio/PrimeSwedenLogo.png";
-import PrimeSweden from "../assets/portfolio/PrimeSweden.png";
+// import myTrelloLogo from "../assets/portfolio/myTrelloLogo.png";
+// import myTrello from "../assets/portfolio/myTrello.png";
+// import CloudyBoxLogo from "../assets/portfolio/CloudyBoxLogo.png";
+// import CloudyBox from "../assets/portfolio/CloudyBox.png";
+// import iQuizLogo from "../assets/portfolio/iQuizLogoBlue.png";
+// import iQuiz from "../assets/portfolio/iQuiz.png";
+// import HBG from "../assets/portfolio/HBG.png";
+// import HBGLogo from "../assets/portfolio/HBGLogo-grey.png";
+// import TicTacToeLogo from "../assets/portfolio/TicTacToeLogo.png";
+// import TicTacToe from "../assets/portfolio/TicTacToe.png";
+// import MdSimpleLogo from "../assets/portfolio/MdSimpleLogo.png";
+// import MdSimple from "../assets/portfolio/MdSimple.png";
+// import PrimeSwedenLogo from "../assets/portfolio/PrimeSwedenLogo.png";
+// import PrimeSweden from "../assets/portfolio/PrimeSweden.png";
+import myTrelloLogo from "../assets/portfolio/myTrelloLogo.jpg";
+import myTrello from "../assets/portfolio/myTrello.jpg";
+import CloudyBoxLogo from "../assets/portfolio/CloudyBoxLogo.jpg";
+import CloudyBox from "../assets/portfolio/CloudyBox.jpg";
+import iQuizLogo from "../assets/portfolio/iQuizLogoBlue.jpg";
+import iQuiz from "../assets/portfolio/iQuiz.jpg";
+import HBG from "../assets/portfolio/HBG.jpg";
+import HBGLogo from "../assets/portfolio/HBGLogo-grey.jpg";
+import TicTacToeLogo from "../assets/portfolio/TicTacToeLogo.jpg";
+import TicTacToe from "../assets/portfolio/TicTacToe.jpg";
+import MdSimpleLogo from "../assets/portfolio/MdSimpleLogo.jpg";
+import MdSimple from "../assets/portfolio/MdSimple.jpg";
+import PrimeSwedenLogo from "../assets/portfolio/PrimeSwedenLogo.jpg";
+import PrimeSweden from "../assets/portfolio/PrimeSweden.jpg";
 
 const data = [
   {
