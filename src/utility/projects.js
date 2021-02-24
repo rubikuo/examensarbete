@@ -1,17 +1,17 @@
 import myTrelloLogo from "../assets/portfolio/myTrelloLogo.png";
-import myTrello from "../assets/portfolio/myTrello.png";
+import myTrello from "../assets/portfolio/myTrello.jpg";
 import CloudyBoxLogo from "../assets/portfolio/CloudyBoxLogo.png";
-import CloudyBox from "../assets/portfolio/CloudyBox.png";
+import CloudyBox from "../assets/portfolio/CloudyBox.jpg";
 import iQuizLogo from "../assets/portfolio/iQuizLogoBlue.png";
-import iQuiz from "../assets/portfolio/iQuiz.png";
-import HBG from "../assets/portfolio/HBG.png";
+import iQuiz from "../assets/portfolio/iQuiz.jpg";
+import HBG from "../assets/portfolio/HBG.jpg";
 import HBGLogo from "../assets/portfolio/HBGLogo-grey.png";
 import TicTacToeLogo from "../assets/portfolio/TicTacToeLogo.png";
-import TicTacToe from "../assets/portfolio/TicTacToe.png";
+import TicTacToe from "../assets/portfolio/TicTacToe.jpg";
 import MdSimpleLogo from "../assets/portfolio/MdSimpleLogo.png";
-import MdSimple from "../assets/portfolio/MdSimple.png";
+import MdSimple from "../assets/portfolio/MdSimple.jpg";
 import PrimeSwedenLogo from "../assets/portfolio/PrimeSwedenLogo.png";
-import PrimeSweden from "../assets/portfolio/PrimeSweden.png";
+import PrimeSweden from "../assets/portfolio/PrimeSweden.jpg";
 
 const data = [
   {

@@ -71,7 +71,7 @@
     }
     &--MyTrello {
       @include bgImg(
-        "../assets/portfolio/myTrelloBg.png",
+        "../assets/portfolio/myTrelloBg.jpg",
         scroll,
         cover,
         rgba(17, 105, 177, 0.637),
@@ -81,7 +81,7 @@
 
     &--CloudyBox {
       @include bgImg(
-        "../assets/portfolio/CloudyBoxBg.png",
+        "../assets/portfolio/CloudyBoxBg.jpg",
         scroll,
         cover,
         rgba(244, 244, 244, 0.938),
@@ -91,7 +91,7 @@
 
     &--iQuiz {
       @include bgImg(
-        "../assets/portfolio/iQuizBg.png",
+        "../assets/portfolio/iQuizBg.jpg",
         scroll,
         cover,
         rgba(185, 185, 185, 0.404),
@@ -100,7 +100,7 @@
     }
     &--WifiFinder {
       @include bgImg(
-        "../assets/portfolio/HBG_Bg.png",
+        "../assets/portfolio/HBG_BG.jpg",
         scroll,
         cover,
         rgba(167, 167, 167, 0.904),
@@ -109,7 +109,7 @@
     }
     &--TicTacToe {
       @include bgImg(
-        "../assets/portfolio/TicTocToeBG.png",
+        "../assets/portfolio/TicTocToeBG.jpg",
         scroll,
         cover,
         rgba(173, 173, 173, 0.747),
@@ -118,7 +118,7 @@
     }
     &--MdSimple {
       @include bgImg(
-        "../assets/portfolio/MdsimpleBG.png",
+        "../assets/portfolio/MdsimpleBG.jpg",
         scroll,
         cover,
         rgba(173, 173, 173, 0.747),
@@ -127,7 +127,7 @@
     }
     &--PrimeSweden {
       @include bgImg(
-        "../assets/portfolio/PrimeSwedenBG.png",
+        "../assets/portfolio/PrimeSwedenBG.jpg",
         scroll,
         cover,
         rgba(228, 228, 228, 0.767),
