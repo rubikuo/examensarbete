@@ -20,7 +20,7 @@
     &-anime {
       left: 50%;
       transform: translate(-50%, -50%);
-      transition: 1s ease-in;
+      transition: 0.8s ease-in;
       &--show {
         opacity: 1;
         filter: drop-shadow(0 2px 5px);
@@ -30,11 +30,11 @@
       }
       &--showMove {
         left: 50%;
-        @include transEffect(2s, ease);
+        @include transEffect(1s, ease);
       }
     }
     &-origin {
-      @include transEffect(2s, ease-in);
+      @include transEffect(1s, ease-in);
       left: 50%;
       transform: translate(-50%, -50%);
 
@@ -71,10 +71,14 @@
     }
   }
   &__link {
+    height: 70%;
+    width: 22%;
+
     position: absolute;
     text-decoration: none;
     top: 42%;
-    @extend %main-font, %col-mid;
+    @extend %main-font, %row-mid;
+    justify-content: space-between;
     font-size: 3vw;
     font-weight: 600;
     z-index: 2;
@@ -82,8 +86,6 @@
     transform: translate(-50%, -50%);
     animation-delay: 0.7s;
     @include transEffect(1s, ease-in);
-    height: 70%;
-    width: 22%;
 
     &:hover {
       color: #551a8b;

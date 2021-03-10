@@ -3,6 +3,7 @@ import RubiOrigin from "../../assets/about/RubiOrigin.png";
 import RubiAnime from "../../assets/about/Rubi.png";
 import RightFace from "../../assets/about/RubiHalfRight.png";
 import LeftFace from "../../assets/about/RubiHalfLeft.png";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const Graph = ({
   children,
@@ -41,7 +42,7 @@ const Graph = ({
           }
           style={showDevSkills ? { display: "none" } : { display: "flex" }}
         >
-          Developer
+          <IoIosArrowBack /> Developer
         </div>
       </div>
 
@@ -74,7 +75,7 @@ const Graph = ({
           }
           style={showDesignSkills ? { display: "none" } : { display: "flex" }}
         >
-          Designer
+          Designer <IoIosArrowForward />
         </div>
       </div>
       <img

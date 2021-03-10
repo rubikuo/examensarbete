@@ -28,7 +28,7 @@ const Options = ({ projectTypes, controlContent, type }) => {
               style={
                 type === projectType
                   ? {
-                      color: "#e085c2",
+                      color: "#ff80b3",
                     }
                   : {}
               }
