@@ -7,7 +7,6 @@
     &-skill {
       width: 100%;
       overflow: hidden;
-      margin: 2% 0 0 0;
     }
   }
 
@@ -144,15 +143,48 @@
   }
 }
 
+@media screen and (max-width: 380px) {
+  .Graph {
+    &__section {
+      &-skill {
+        height: 65vh;
+      }
+    }
+    &__link {
+      font-size: 1.5rem;
+      width: 25%;
+      &-right {
+        right: -10%;
+      }
+      &-left {
+        left: 15%;
+      }
+    }
+    &__image {
+      &-leftFace {
+        width: 65%;
+      }
+      &-rightFace {
+        width: 65%;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 900px) {
   .Graph {
+    &__link {
+      height: auto;
+    }
     &__image {
       &-anime {
+        display: none !important;
         &--showMove {
           display: none !important;
         }
       }
       &-origin {
+        display: none !important;
         &--showMove {
           display: none !important;
         }

@@ -25,7 +25,7 @@
   &__btn {
     @extend %main-font, %row-mid;
     font-weight: 700;
-    margin: 10px 15px;
+    margin: 10px;
     padding: 3px 12px;
     position: relative;
     border: none;
@@ -33,9 +33,15 @@
     background-color: transparent;
 
     p {
-      font-size: 1.9rem;
+      font-size: 1.6rem;
       text-shadow: 1px 1px 1px rgb(180, 180, 180);
-      color: rgb(63, 63, 63);
+      color: rgb(102, 100, 100);
     }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .Options {
+    min-width: 350px;
   }
 }

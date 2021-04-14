@@ -1,6 +1,5 @@
 import React from "react";
 import "./Options.scss";
-import flower from "../../assets/portfolio/Blossom.png";
 
 const Options = ({ projectTypes, controlContent, type }) => {
   return (
@@ -13,22 +12,17 @@ const Options = ({ projectTypes, controlContent, type }) => {
             style={
               type === projectType
                 ? {
-                    transform: "scale(1.2) translateX(15px)",
+                    transform: "scale(1.3)",
                   }
                 : {}
             }
             onClick={() => controlContent(projectType)}
           >
-            {type === projectType && (
-              <div className="Options__imgWrapper">
-                <img className="Options__img" src={flower} alt="" />
-              </div>
-            )}
             <p
               style={
                 type === projectType
                   ? {
-                      color: "#ff80b3",
+                      color: "black",
                     }
                   : {}
               }

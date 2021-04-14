@@ -70,7 +70,7 @@
     align-items: flex-end;
 
     h1 {
-      font-size: 2rem;
+      font-size: 1.9rem;
       margin: 2px 0;
     }
   }
@@ -315,9 +315,18 @@
   .Resume {
     min-height: calc(100vh - 60px);
     margin-top: 60px;
+
+    &__title {
+      h1,
+      .Resume__btn {
+        font-size: 2.3rem;
+      }
+    }
     &__section {
       height: auto;
+
       &-skills {
+        padding-top: 10px;
         height: 70vh;
       }
       &-experience {
@@ -377,6 +386,26 @@
     &__btn {
       &-arrowDown {
         display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .Resume {
+    &__section {
+      min-height: 75vh;
+      &-skills {
+        height: 30vh !important;
+      }
+    }
+    &__para {
+      padding: 10px 20px;
+      font-size: 1.6rem;
+    }
+    &__subtitle {
+      &-contact {
+        font-size: 1.5rem;
       }
     }
   }
