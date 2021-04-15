@@ -192,7 +192,16 @@
   }
 }
 
+//iphone 5 /SE
 @media screen and (device-aspect-ratio: 40/71) {
+  .Modal {
+    top: 70%;
+    padding: 10px 0 20px 0;
+  }
+}
+
+//iphone 6/7/8
+@media screen and (device-aspect-ratio: 375/667) {
   .Modal {
     top: 65%;
     padding: 10px 0 20px 0;
