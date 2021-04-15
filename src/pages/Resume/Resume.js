@@ -265,7 +265,7 @@ const Resume = () => {
           <Link
             data-aos="zoom-in"
             className="Resume__btn  Resume__btn-download"
-            to="RubiKuoCV.pdf"
+            to="/resume/rubi_kuo_resume.pdf"
             target="_blank"
             download
           >
