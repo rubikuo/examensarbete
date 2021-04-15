@@ -1,7 +1,8 @@
 import React from "react";
 import "./Modal.scss";
 import ReactDom from "react-dom";
-import { MdClose, MdKeyboardArrowRight } from "react-icons/md";
+import { MdClose } from "react-icons/md";
+import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { HandleBgScroll } from "../../utility/functions";
 import screen from "../../assets/portfolio/Screen.png";
@@ -24,14 +25,18 @@ const Modal = ({ open, onClose, project }) => {
               <Link
                 target="_blank"
                 to={project.gitHubUrl}
-                className="Modal__link"
+                className="Modal__link Modal__link-code"
               >
                 View Code
-                <MdKeyboardArrowRight />
+                <IoIosArrowForward />
               </Link>
-              <Link target="_blank" to={project.url} className="Modal__link">
+              <Link
+                target="_blank"
+                to={project.url}
+                className="Modal__link Modal__link-site"
+              >
                 Visit Site
-                <MdKeyboardArrowRight />
+                <IoIosArrowForward />
               </Link>
             </div>
           </div>

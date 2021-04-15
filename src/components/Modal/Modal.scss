@@ -3,7 +3,7 @@
 .Modal {
   width: 82vw;
   max-width: 900px;
-  height: 72vh;
+  height: auto;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -33,7 +33,7 @@
     flex-wrap: wrap;
   }
   &__wrapper {
-    width: 80%;
+    width: 100%;
     @extend %row-between;
     margin-top: 40px;
   }
@@ -41,9 +41,16 @@
     @extend %main-font, %row-mid, %greyBtn;
     font-weight: 700;
     font-size: 1.5rem;
-    width: 100%;
-    margin: 10px;
+    width: 45%;
+    // margin: 5px;
     line-height: 2.8rem;
+
+    &-code {
+      background-color: rgbrgb(80, 76, 76);
+    }
+    &-site {
+      background-color: rgb(80, 76, 76);
+    }
   }
   &__icon {
     font-size: 1.7em;
@@ -119,8 +126,8 @@
       width: 35px;
       height: 35px;
       text-align: center;
-      line-height: 3rem;
-      font-size: 3rem;
+      line-height: 2.5rem;
+      font-size: 2.5rem;
       border: none;
       outline: none;
       background-color: transparent;
@@ -132,21 +139,41 @@
   }
 }
 
-@media screen and (max-width: 855px) {
+@media screen and (max-width: 480px) {
+  .Modal {
+    &__wrapper {
+      width: 100%;
+      flex-direction: column;
+      justify-content: initial;
+    }
+    &__link {
+      width: 100%;
+      margin: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
   .Modal {
     max-width: 850px;
     &__section {
       width: 80%;
 
+      &-left {
+        margin: 0 auto;
+      }
       &-right {
         display: none;
       }
     }
     &__wrapper {
-      width: 100%;
+      width: 80%;
+      margin: 30px auto;
+      justify-content: space-evenly;
     }
     &__link {
-      margin: 5px;
+      width: 40%;
+      min-width: 180px;
     }
 
     &__img {

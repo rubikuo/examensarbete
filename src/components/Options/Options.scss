@@ -1,7 +1,7 @@
 @import "../../style/SassVariables";
 
 .Options {
-  margin: 30px auto 10px auto;
+  margin: 25px auto 10px auto;
   @extend %row-mid;
   width: 72%;
   min-width: 380px;
@@ -40,8 +40,22 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 415px) {
   .Options {
-    min-width: 350px;
+    width: 100% !important;
+    max-width: 290px;
+    // margin: 0;
+    min-width: initial;
+    &__btn {
+      margin: 5px;
+    }
+  }
+}
+
+@media screen and (device-aspect-ratio: 40/71) {
+  .Options {
+    // padding: 10px 20px;
+    width: 100% !important;
+    min-width: initial;
   }
 }
