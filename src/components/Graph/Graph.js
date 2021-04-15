@@ -3,7 +3,7 @@ import RubiOrigin from "../../assets/about/RubiOrigin.png";
 import RubiAnime from "../../assets/about/Rubi.png";
 import RightFace from "../../assets/about/RubiHalfRight.png";
 import LeftFace from "../../assets/about/RubiHalfLeft.png";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
 
 const Graph = ({
   children,
@@ -42,7 +42,7 @@ const Graph = ({
           }
           style={showDevSkills ? { display: "none" } : { display: "flex" }}
         >
-          <IoIosArrowBack /> Developer
+          Developer <FaArrowCircleLeft className="Graph__icon" />
         </div>
       </div>
 
@@ -75,7 +75,7 @@ const Graph = ({
           }
           style={showDesignSkills ? { display: "none" } : { display: "flex" }}
         >
-          Designer <IoIosArrowForward />
+          Designer <FaArrowCircleRight className="Graph__icon" />
         </div>
       </div>
       <img

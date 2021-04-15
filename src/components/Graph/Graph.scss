@@ -83,8 +83,8 @@
     z-index: 2;
     cursor: pointer;
     transform: translate(-50%, -50%);
-    animation-delay: 0.7s;
-    @include transEffect(1s, ease-in);
+    // animation-delay: 0.7s;
+    // @include transEffect(1s, ease-in);
 
     &:hover {
       color: #551a8b;
@@ -153,12 +153,19 @@
     &__link {
       font-size: 1.5rem;
       width: 25%;
+      flex-direction: column;
+
       &-right {
         right: -10%;
       }
       &-left {
-        left: 15%;
+        left: 16%;
       }
+    }
+    &__icon {
+      display: inline-block;
+      margin-top: 15px;
+      font-size: 2rem;
     }
     &__image {
       &-leftFace {
