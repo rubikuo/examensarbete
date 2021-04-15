@@ -4,14 +4,14 @@
   width: 82vw;
   max-width: 900px;
   height: auto;
-  max-height: 480px;
+  max-height: 500px;
   overflow: scroll;
   position: fixed;
   top: 60%;
   left: 50%;
   transform: translate(-50%, -60%);
   background-color: rgb(245, 238, 242);
-  padding: 20px 0px;
+  padding: 10px 0px 20px 0px;
   z-index: 1000;
 
   @extend %radius;
@@ -31,7 +31,7 @@
     height: 100%;
 
     // overflow: scroll;
-    // position: relative;
+    position: relative;
     @extend %row-mid;
     flex-wrap: wrap;
   }
@@ -164,6 +164,7 @@
 
       &-left {
         margin: 0 auto;
+        padding: 20px 0 0 0;
       }
       &-right {
         display: none;
@@ -188,5 +189,12 @@
         height: 57%;
       }
     }
+  }
+}
+
+@media screen and (device-aspect-ratio: 40/71) {
+  .Modal {
+    top: 65%;
+    padding: 10px 0 20px 0;
   }
 }
